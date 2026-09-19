@@ -1,0 +1,16 @@
+2026-08-22 16:46:02 - INFO - RemoteSSM Finetuning | Device: cuda
+2026-08-22 16:46:02 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_train_s51_to_s72_n22_a8202b1e_seq300_step30]，共找到 14644 个样本切片，极速准备就绪！
+2026-08-22 16:46:19 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_val_s73_to_s77_n5_57bc15c1_seq300_step300]，共找到 495 个样本切片，极速准备就绪！
+2026-08-22 16:46:19 - INFO - Train: 14644 samples, subjects [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
+2026-08-22 16:46:19 - INFO - Val:   495 samples, subjects [73, 74, 75, 76, 77]
+2026-08-22 16:46:19 - INFO - HR labels: BVP-derived (SOTA-comparable)
+2026-08-22 16:46:19 - INFO - d=256 blocks=2 B=16 dropout=0.4 wd=0.005
+2026-08-22 16:46:19 - INFO - V11: random init + curriculum ([300] @ [30])
+2026-08-22 16:46:19 - INFO - GRL: warmup=30 adv_w=0.0 alpha_max=0.0
+2026-08-22 16:46:20 - INFO - Params: 0.52M (V11 random init)
+2026-08-22 16:46:25 - INFO - Pre-flight check: BVP [-2.680, 1.950], HR [-0.420, -0.237], NaN=False
+2026-08-22 17:00:53 - INFO - Epoch   1/30 | Len=300 | Loss 1848.2546 | Val FFT 22.69 | Val r(HR) 0.183 | HH MAE 81.34 | HH r 0.025
+2026-08-22 17:00:53 - INFO -   ✓ Best: 22.69 BPM
+2026-08-22 17:15:17 - INFO - Epoch   2/30 | Len=300 | Loss 1625.1165 | Val FFT 30.34 | Val r(HR) 0.018 | HH MAE 81.43 | HH r 0.004
+2026-08-22 17:29:39 - INFO - Epoch   3/30 | Len=300 | Loss 1507.3285 | Val FFT 30.03 | Val r(HR) -0.016 | HH MAE 81.42 | HH r 0.002
+2026-08-22 17:43:59 - INFO - Epoch   4/30 | Len=300 | Loss 1470.9264 | Val FFT 30.90 | Val r(HR) 0.016 | HH MAE 81.31 | HH r -0.013

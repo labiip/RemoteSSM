@@ -1,0 +1,86 @@
+[UBFC-ABLATE:no_residual] train=40 val=7 test=10 | env={'NO_RESIDUAL': '1'} cfg={}
+2026-08-28 04:32:03 - INFO - RemoteSSM Finetuning | Device: cuda
+2026-08-28 04:32:03 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_train_s01_to_s106_n40_1b42758a_seq300_step10]，共找到 9021 个样本切片，极速准备就绪！
+2026-08-28 04:32:37 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_val_s35_to_s108_n7_a9db59b9_seq300_step300]，共找到 95 个样本切片，极速准备就绪！
+2026-08-28 04:32:47 - INFO - Train: 9021 samples, subjects [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 101, 102, 103, 104, 105, 106]
+2026-08-28 04:32:47 - INFO - Val:   95 samples, subjects [35, 36, 37, 38, 39, 107, 108]
+2026-08-28 04:32:47 - INFO - HR labels: BVP-derived (SOTA-comparable)
+2026-08-28 04:32:47 - INFO - d=256 blocks=2 B=16 dropout=0.4 wd=0.005
+2026-08-28 04:32:47 - INFO - V11: random init + curriculum ([300] @ [40])
+2026-08-28 04:32:47 - INFO - GRL: warmup=30 adv_w=0.0 alpha_max=0.0
+~/.local/lib/python3.12/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+2026-08-28 04:32:47 - INFO - Params: 0.52M (V11 random init)
+2026-08-28 04:32:52 - INFO - Pre-flight check: BVP [-0.256, 0.340], HR [-0.311, -0.284], NaN=False
+~/.local/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:224: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+2026-08-28 04:41:40 - INFO - Epoch   1/40 | Len=300 | Loss 1.6712 | Val FFT 10.61 | Val r(HR) 0.933 | HH MAE 90.30 | HH r -0.013
+2026-08-28 04:41:40 - INFO -   ✓ Best: 10.61 BPM
+2026-08-28 04:50:29 - INFO - Epoch   2/40 | Len=300 | Loss 1.4345 | Val FFT 10.61 | Val r(HR) 0.768 | HH MAE 90.32 | HH r 0.028
+2026-08-28 04:59:14 - INFO - Epoch   3/40 | Len=300 | Loss 0.9944 | Val FFT 6.08 | Val r(HR) 0.859 | HH MAE 90.35 | HH r 0.319
+2026-08-28 04:59:15 - INFO -   ✓ Best: 6.08 BPM
+2026-08-28 05:08:02 - INFO - Epoch   4/40 | Len=300 | Loss 0.7564 | Val FFT 5.66 | Val r(HR) 0.866 | HH MAE 90.70 | HH r 0.104
+2026-08-28 05:08:02 - INFO -   ✓ Best: 5.66 BPM
+2026-08-28 05:16:48 - INFO - Epoch   5/40 | Len=300 | Loss 0.6524 | Val FFT 3.52 | Val r(HR) 0.921 | HH MAE 90.78 | HH r 0.065
+2026-08-28 05:16:48 - INFO -   ✓ Best: 3.52 BPM
+2026-08-28 05:25:34 - INFO - Epoch   6/40 | Len=300 | Loss 0.5832 | Val FFT 2.55 | Val r(HR) 0.940 | HH MAE 90.84 | HH r 0.224
+2026-08-28 05:25:34 - INFO -   ✓ Best: 2.55 BPM
+2026-08-28 05:34:21 - INFO - Epoch   7/40 | Len=300 | Loss 0.5391 | Val FFT 2.46 | Val r(HR) 0.941 | HH MAE 90.82 | HH r 0.195
+2026-08-28 05:34:21 - INFO -   ✓ Best: 2.46 BPM
+2026-08-28 05:43:10 - INFO - Epoch   8/40 | Len=300 | Loss 0.5100 | Val FFT 1.87 | Val r(HR) 0.960 | HH MAE 90.79 | HH r 0.299
+2026-08-28 05:43:10 - INFO -   ✓ Best: 1.87 BPM
+2026-08-28 05:51:58 - INFO - Epoch   9/40 | Len=300 | Loss 0.4861 | Val FFT 1.97 | Val r(HR) 0.957 | HH MAE 90.75 | HH r 0.362
+2026-08-28 06:00:45 - INFO - Epoch  10/40 | Len=300 | Loss 0.4674 | Val FFT 1.31 | Val r(HR) 0.968 | HH MAE 90.74 | HH r 0.403
+2026-08-28 06:00:46 - INFO -   ✓ Best: 1.31 BPM
+2026-08-28 06:09:33 - INFO - Epoch  11/40 | Len=300 | Loss 0.4526 | Val FFT 2.41 | Val r(HR) 0.944 | HH MAE 90.71 | HH r 0.386
+2026-08-28 06:18:19 - INFO - Epoch  12/40 | Len=300 | Loss 0.4383 | Val FFT 2.21 | Val r(HR) 0.952 | HH MAE 90.69 | HH r 0.541
+2026-08-28 06:27:05 - INFO - Epoch  13/40 | Len=300 | Loss 0.4253 | Val FFT 1.60 | Val r(HR) 0.967 | HH MAE 90.67 | HH r 0.491
+2026-08-28 06:35:54 - INFO - Epoch  14/40 | Len=300 | Loss 0.4168 | Val FFT 2.02 | Val r(HR) 0.966 | HH MAE 90.65 | HH r 0.500
+2026-08-28 06:44:40 - INFO - Epoch  15/40 | Len=300 | Loss 0.4057 | Val FFT 2.33 | Val r(HR) 0.949 | HH MAE 90.63 | HH r 0.488
+2026-08-28 06:53:27 - INFO - Epoch  16/40 | Len=300 | Loss 0.3975 | Val FFT 1.54 | Val r(HR) 0.974 | HH MAE 90.61 | HH r 0.494
+2026-08-28 07:02:14 - INFO - Epoch  17/40 | Len=300 | Loss 0.3900 | Val FFT 2.24 | Val r(HR) 0.959 | HH MAE 90.59 | HH r 0.510
+2026-08-28 07:11:01 - INFO - Epoch  18/40 | Len=300 | Loss 0.3834 | Val FFT 2.54 | Val r(HR) 0.952 | HH MAE 90.59 | HH r 0.516
+2026-08-28 07:19:48 - INFO - Epoch  19/40 | Len=300 | Loss 0.3778 | Val FFT 2.68 | Val r(HR) 0.949 | HH MAE 90.57 | HH r 0.547
+2026-08-28 07:28:35 - INFO - Epoch  20/40 | Len=300 | Loss 0.3722 | Val FFT 2.90 | Val r(HR) 0.943 | HH MAE 90.57 | HH r 0.471
+2026-08-28 07:37:22 - INFO - Epoch  21/40 | Len=300 | Loss 0.3667 | Val FFT 2.40 | Val r(HR) 0.961 | HH MAE 90.56 | HH r 0.501
+2026-08-28 07:46:07 - INFO - Epoch  22/40 | Len=300 | Loss 0.3632 | Val FFT 2.59 | Val r(HR) 0.956 | HH MAE 90.57 | HH r 0.480
+2026-08-28 07:54:54 - INFO - Epoch  23/40 | Len=300 | Loss 0.3580 | Val FFT 2.99 | Val r(HR) 0.945 | HH MAE 90.56 | HH r 0.448
+2026-08-28 08:03:41 - INFO - Epoch  24/40 | Len=300 | Loss 0.3567 | Val FFT 2.40 | Val r(HR) 0.954 | HH MAE 90.56 | HH r 0.487
+2026-08-28 08:12:26 - INFO - Epoch  25/40 | Len=300 | Loss 0.3530 | Val FFT 2.97 | Val r(HR) 0.938 | HH MAE 90.55 | HH r 0.536
+2026-08-28 08:21:15 - INFO - Epoch  26/40 | Len=300 | Loss 0.3492 | Val FFT 2.51 | Val r(HR) 0.954 | HH MAE 90.54 | HH r 0.462
+2026-08-28 08:30:02 - INFO - Epoch  27/40 | Len=300 | Loss 0.3468 | Val FFT 3.09 | Val r(HR) 0.940 | HH MAE 90.54 | HH r 0.506
+2026-08-28 08:38:47 - INFO - Epoch  28/40 | Len=300 | Loss 0.3445 | Val FFT 2.85 | Val r(HR) 0.943 | HH MAE 90.53 | HH r 0.492
+2026-08-28 08:47:37 - INFO - Epoch  29/40 | Len=300 | Loss 0.3431 | Val FFT 2.96 | Val r(HR) 0.940 | HH MAE 90.52 | HH r 0.491
+2026-08-28 08:56:22 - INFO - Epoch  30/40 | Len=300 | Loss 0.3420 | Val FFT 2.95 | Val r(HR) 0.939 | HH MAE 90.52 | HH r 0.521
+2026-08-28 09:05:09 - INFO - Epoch  31/40 | Len=300 | Loss 0.3396 | Val FFT 3.59 | Val r(HR) 0.931 | HH MAE 90.53 | HH r 0.485
+2026-08-28 09:13:56 - INFO - Epoch  32/40 | Len=300 | Loss 0.3387 | Val FFT 2.93 | Val r(HR) 0.939 | HH MAE 90.53 | HH r 0.481
+2026-08-28 09:22:43 - INFO - Epoch  33/40 | Len=300 | Loss 0.3378 | Val FFT 2.84 | Val r(HR) 0.942 | HH MAE 90.52 | HH r 0.482
+2026-08-28 09:31:30 - INFO - Epoch  34/40 | Len=300 | Loss 0.3372 | Val FFT 3.02 | Val r(HR) 0.939 | HH MAE 90.52 | HH r 0.488
+2026-08-28 09:40:15 - INFO - Epoch  35/40 | Len=300 | Loss 0.3361 | Val FFT 2.84 | Val r(HR) 0.942 | HH MAE 90.51 | HH r 0.456
+2026-08-28 09:49:00 - INFO - Epoch  36/40 | Len=300 | Loss 0.3351 | Val FFT 2.91 | Val r(HR) 0.939 | HH MAE 90.52 | HH r 0.418
+2026-08-28 09:57:48 - INFO - Epoch  37/40 | Len=300 | Loss 0.3351 | Val FFT 3.09 | Val r(HR) 0.941 | HH MAE 90.52 | HH r 0.449
+2026-08-28 10:06:36 - INFO - Epoch  38/40 | Len=300 | Loss 0.3348 | Val FFT 3.22 | Val r(HR) 0.937 | HH MAE 90.52 | HH r 0.439
+2026-08-28 10:15:23 - INFO - Epoch  39/40 | Len=300 | Loss 0.3347 | Val FFT 2.87 | Val r(HR) 0.940 | HH MAE 90.52 | HH r 0.450
+2026-08-28 10:24:10 - INFO - Epoch  40/40 | Len=300 | Loss 0.3346 | Val FFT 2.87 | Val r(HR) 0.941 | HH MAE 90.51 | HH r 0.431
+2026-08-28 10:24:11 - INFO - Done. Best Val FFT: 1.31 BPM
+
+[EVAL] no_residual UBFC test 40-49
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_ablate_no_residual_best.pth | Params: 0.52M
+2026-08-28 10:24:12 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_test_s40_to_s49_n10_f763fd4e_seq300_step300]，共找到 51 个样本切片，极速准备就绪！
+[INFO] Test: 51 samples | subjects [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 0.52  RMSE: 0.84  StdErr: 0.66  Pearson: 0.9963
+  Acc<3: 96.1%  Acc<5: 100.0%  Acc<8: 100.0%
+  Valid: 51/51
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------

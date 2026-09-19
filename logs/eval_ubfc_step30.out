@@ -1,0 +1,100 @@
+
+===== full (COB+residual) =====
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_pure_best.pth | Params: 0.52M
+[INFO] Test: 481 samples | subjects [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 0.87  RMSE: 2.99  StdErr: 2.86  Pearson: 0.9573
+  Acc<3: 97.3%  Acc<5: 98.1%  Acc<8: 98.3%
+  Valid: 481/481
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+===== w/o residual =====
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_ablate_no_residual_best.pth | Params: 0.52M
+[INFO] Test: 481 samples | subjects [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 0.70  RMSE: 2.31  StdErr: 2.20  Pearson: 0.9730
+  Acc<3: 98.1%  Acc<5: 99.0%  Acc<8: 99.0%
+  Valid: 481/481
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+===== w/o COB (RANDOM_A) =====
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_ablate_no_cob_best.pth | Params: 0.52M
+[INFO] Test: 481 samples | subjects [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 0.59  RMSE: 0.90  StdErr: 0.68  Pearson: 0.9957
+  Acc<3: 97.9%  Acc<5: 99.8%  Acc<8: 100.0%
+  Valid: 481/481
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+===== w/o out-of-band =====
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_ablate_no_outband_best.pth | Params: 0.52M
+[INFO] Test: 481 samples | subjects [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 0.97  RMSE: 4.01  StdErr: 3.89  Pearson: 0.9260
+  Acc<3: 97.9%  Acc<5: 98.3%  Acc<8: 98.3%
+  Valid: 481/481
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+===== scalar HR supervision =====
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_ablate_bpm_supervision_best.pth | Params: 0.52M
+[INFO] Test: 481 samples | subjects [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 23.28  RMSE: 29.74  StdErr: 18.50  Pearson: 0.5370
+  Acc<3: 9.8%  Acc<5: 19.8%  Acc<8: 31.0%
+  Valid: 481/481
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------

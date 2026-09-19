@@ -1,0 +1,98 @@
+[MMPD-DUAL-NORES-PT] train=22 val=5 test=6 (NO_RESIDUAL=1)
+2026-09-04 06:14:30 - INFO - RemoteSSM Finetuning | Device: cuda
+2026-09-04 06:14:30 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v6_roi64_real_train_s51_to_s72_n22_a8202b1e_seq300_step30]，共找到 14653 个样本切片，极速准备就绪！
+2026-09-04 06:29:56 - INFO - ⏳ 未检测到实数缓存 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v6_roi64_real_val_s73_to_s77_n5_57bc15c1_seq300_step30]，开始执行特征预处理 (仅需运行一次)...
+2026-09-04 06:29:56 - INFO - [Dataset-val] 正在处理 100 个受试者...
+2026-09-04 06:33:15 - INFO - [val] 预处理进度: 500/5100
+2026-09-04 06:33:17 - INFO - [val] 预处理进度: 1000/5100
+2026-09-04 06:33:19 - INFO - [val] 预处理进度: 1500/5100
+2026-09-04 06:33:20 - INFO - [val] 预处理进度: 2000/5100
+2026-09-04 06:33:22 - INFO - [val] 预处理进度: 2500/5100
+2026-09-04 06:33:24 - INFO - [val] 预处理进度: 3000/5100
+2026-09-04 06:33:25 - INFO - [val] 预处理进度: 3500/5100
+2026-09-04 06:33:27 - INFO - [val] 预处理进度: 4000/5100
+2026-09-04 06:33:29 - INFO - [val] 预处理进度: 4500/5100
+2026-09-04 06:33:31 - INFO - [val] 预处理进度: 5000/5100
+2026-09-04 06:33:31 - INFO - 💾 [val] 实数缓存完成！保留: 4324, 过滤: 776
+2026-09-04 06:33:34 - INFO - Train: 14653 samples, subjects [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
+2026-09-04 06:33:34 - INFO - Val:   4324 samples, subjects [73, 74, 75, 76, 77]
+2026-09-04 06:33:34 - INFO - HR labels: BVP-derived (SOTA-comparable)
+2026-09-04 06:33:34 - INFO - d=256 blocks=2 B=4 dropout=0.4 wd=0.005
+2026-09-04 06:33:34 - INFO - V11: random init + curriculum ([300] @ [40])
+2026-09-04 06:33:34 - INFO - GRL: warmup=30 adv_w=0.0 alpha_max=0.0
+2026-09-04 06:33:34 - INFO - Params: 0.52M (V11 random init)
+~/rppg/rppg_project/train.py:314: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load(pretrain_full, map_location=device)
+2026-09-04 06:33:34 - INFO - PRETRAIN_FULL: remotessm_ubfc_pure_best.pth | missing=0 unexpected=0
+2026-09-04 06:33:42 - INFO - Pre-flight check: BVP [-10.814, 16.407], HR [0.164, 0.223], NaN=False
+~/.local/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:224: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+2026-09-04 07:20:14 - INFO - Epoch   1/40 | Len=300 | Loss 1.8564 | Val FFT 12.70 | Val r(HR) 0.261 | HH MAE 81.09 | HH r -0.126
+2026-09-04 07:20:15 - INFO -   ✓ Best: 12.70 BPM
+2026-09-04 08:06:39 - INFO - Epoch   2/40 | Len=300 | Loss 1.7545 | Val FFT 12.01 | Val r(HR) 0.261 | HH MAE 81.08 | HH r -0.149
+2026-09-04 08:06:39 - INFO -   ✓ Best: 12.01 BPM
+2026-09-04 08:52:24 - INFO - Epoch   3/40 | Len=300 | Loss 1.7102 | Val FFT 12.17 | Val r(HR) 0.268 | HH MAE 81.07 | HH r -0.165
+2026-09-04 09:37:54 - INFO - Epoch   4/40 | Len=300 | Loss 1.6751 | Val FFT 11.85 | Val r(HR) 0.277 | HH MAE 81.06 | HH r -0.141
+2026-09-04 09:37:54 - INFO -   ✓ Best: 11.85 BPM
+2026-09-04 10:23:21 - INFO - Epoch   5/40 | Len=300 | Loss 1.6481 | Val FFT 10.97 | Val r(HR) 0.328 | HH MAE 81.05 | HH r -0.147
+2026-09-04 10:23:22 - INFO -   ✓ Best: 10.97 BPM
+2026-09-04 11:09:46 - INFO - Epoch   6/40 | Len=300 | Loss 1.6231 | Val FFT 11.02 | Val r(HR) 0.315 | HH MAE 81.08 | HH r -0.145
+2026-09-04 11:56:12 - INFO - Epoch   7/40 | Len=300 | Loss 1.6053 | Val FFT 10.58 | Val r(HR) 0.346 | HH MAE 81.06 | HH r -0.143
+2026-09-04 11:56:13 - INFO -   ✓ Best: 10.58 BPM
+2026-09-04 12:41:57 - INFO - Epoch   8/40 | Len=300 | Loss 1.5865 | Val FFT 10.17 | Val r(HR) 0.362 | HH MAE 81.06 | HH r -0.080
+2026-09-04 12:41:58 - INFO -   ✓ Best: 10.17 BPM
+2026-09-04 13:27:28 - INFO - Epoch   9/40 | Len=300 | Loss 1.5667 | Val FFT 9.79 | Val r(HR) 0.376 | HH MAE 81.06 | HH r -0.082
+2026-09-04 13:27:29 - INFO -   ✓ Best: 9.79 BPM
+2026-09-04 14:12:55 - INFO - Epoch  10/40 | Len=300 | Loss 1.5509 | Val FFT 9.48 | Val r(HR) 0.386 | HH MAE 81.04 | HH r -0.061
+2026-09-04 14:12:55 - INFO -   ✓ Best: 9.48 BPM
+2026-09-04 14:58:21 - INFO - Epoch  11/40 | Len=300 | Loss 1.5324 | Val FFT 10.09 | Val r(HR) 0.354 | HH MAE 81.04 | HH r -0.067
+2026-09-04 15:43:53 - INFO - Epoch  12/40 | Len=300 | Loss 1.5168 | Val FFT 9.09 | Val r(HR) 0.416 | HH MAE 81.03 | HH r -0.066
+2026-09-04 15:43:53 - INFO -   ✓ Best: 9.09 BPM
+2026-09-04 16:29:23 - INFO - Epoch  13/40 | Len=300 | Loss 1.5005 | Val FFT 9.83 | Val r(HR) 0.360 | HH MAE 81.02 | HH r -0.055
+2026-09-04 17:14:51 - INFO - Epoch  14/40 | Len=300 | Loss 1.4849 | Val FFT 9.74 | Val r(HR) 0.370 | HH MAE 81.00 | HH r -0.086
+2026-09-04 18:00:20 - INFO - Epoch  15/40 | Len=300 | Loss 1.4718 | Val FFT 9.62 | Val r(HR) 0.373 | HH MAE 81.02 | HH r -0.035
+2026-09-04 18:45:47 - INFO - Epoch  16/40 | Len=300 | Loss 1.4582 | Val FFT 9.55 | Val r(HR) 0.368 | HH MAE 81.01 | HH r -0.076
+2026-09-04 19:31:15 - INFO - Epoch  17/40 | Len=300 | Loss 1.4448 | Val FFT 9.81 | Val r(HR) 0.349 | HH MAE 80.98 | HH r -0.043
+2026-09-04 20:16:42 - INFO - Epoch  18/40 | Len=300 | Loss 1.4337 | Val FFT 9.50 | Val r(HR) 0.370 | HH MAE 81.01 | HH r -0.064
+2026-09-04 21:02:11 - INFO - Epoch  19/40 | Len=300 | Loss 1.4231 | Val FFT 9.84 | Val r(HR) 0.338 | HH MAE 81.02 | HH r -0.036
+2026-09-04 21:47:40 - INFO - Epoch  20/40 | Len=300 | Loss 1.4125 | Val FFT 9.81 | Val r(HR) 0.355 | HH MAE 81.02 | HH r -0.054
+2026-09-04 22:33:08 - INFO - Epoch  21/40 | Len=300 | Loss 1.4016 | Val FFT 9.77 | Val r(HR) 0.345 | HH MAE 81.02 | HH r -0.044
+2026-09-04 23:18:36 - INFO - Epoch  22/40 | Len=300 | Loss 1.3932 | Val FFT 9.77 | Val r(HR) 0.351 | HH MAE 81.03 | HH r -0.055
+2026-09-05 00:04:01 - INFO - Epoch  23/40 | Len=300 | Loss 1.3867 | Val FFT 10.18 | Val r(HR) 0.321 | HH MAE 81.05 | HH r -0.028
+2026-09-05 00:49:28 - INFO - Epoch  24/40 | Len=300 | Loss 1.3803 | Val FFT 9.94 | Val r(HR) 0.340 | HH MAE 81.06 | HH r -0.055
+2026-09-05 01:34:57 - INFO - Epoch  25/40 | Len=300 | Loss 1.3721 | Val FFT 9.90 | Val r(HR) 0.349 | HH MAE 81.04 | HH r -0.042
+2026-09-05 02:20:27 - INFO - Epoch  26/40 | Len=300 | Loss 1.3648 | Val FFT 10.04 | Val r(HR) 0.325 | HH MAE 81.04 | HH r -0.048
+2026-09-05 03:06:00 - INFO - Epoch  27/40 | Len=300 | Loss 1.3608 | Val FFT 9.81 | Val r(HR) 0.342 | HH MAE 81.05 | HH r -0.055
+2026-09-05 03:51:33 - INFO - Epoch  28/40 | Len=300 | Loss 1.3543 | Val FFT 10.09 | Val r(HR) 0.325 | HH MAE 81.06 | HH r -0.056
+2026-09-05 04:37:05 - INFO - Epoch  29/40 | Len=300 | Loss 1.3508 | Val FFT 9.96 | Val r(HR) 0.330 | HH MAE 81.06 | HH r -0.065
+2026-09-05 05:22:33 - INFO - Epoch  30/40 | Len=300 | Loss 1.3485 | Val FFT 9.61 | Val r(HR) 0.346 | HH MAE 81.05 | HH r -0.060
+2026-09-05 06:08:03 - INFO - Epoch  31/40 | Len=300 | Loss 1.3427 | Val FFT 10.03 | Val r(HR) 0.324 | HH MAE 81.06 | HH r -0.063
+2026-09-05 06:53:38 - INFO - Epoch  32/40 | Len=300 | Loss 1.3420 | Val FFT 9.95 | Val r(HR) 0.331 | HH MAE 81.07 | HH r -0.070
+2026-09-05 07:39:08 - INFO - Epoch  33/40 | Len=300 | Loss 1.3382 | Val FFT 9.59 | Val r(HR) 0.350 | HH MAE 81.07 | HH r -0.046
+2026-09-05 08:24:43 - INFO - Epoch  34/40 | Len=300 | Loss 1.3364 | Val FFT 9.90 | Val r(HR) 0.331 | HH MAE 81.07 | HH r -0.079
+2026-09-05 09:10:13 - INFO - Epoch  35/40 | Len=300 | Loss 1.3351 | Val FFT 9.59 | Val r(HR) 0.347 | HH MAE 81.07 | HH r -0.069
+2026-09-05 09:55:40 - INFO - Epoch  36/40 | Len=300 | Loss 1.3343 | Val FFT 10.16 | Val r(HR) 0.319 | HH MAE 81.06 | HH r -0.064
+2026-09-05 10:41:08 - INFO - Epoch  37/40 | Len=300 | Loss 1.3327 | Val FFT 9.89 | Val r(HR) 0.331 | HH MAE 81.08 | HH r -0.076
+2026-09-05 11:26:39 - INFO - Epoch  38/40 | Len=300 | Loss 1.3321 | Val FFT 10.13 | Val r(HR) 0.317 | HH MAE 81.07 | HH r -0.062
+2026-09-05 12:11:51 - INFO - Epoch  39/40 | Len=300 | Loss 1.3313 | Val FFT 9.77 | Val r(HR) 0.338 | HH MAE 81.08 | HH r -0.050
+2026-09-05 12:56:56 - INFO - Epoch  40/40 | Len=300 | Loss 1.3312 | Val FFT 9.61 | Val r(HR) 0.347 | HH MAE 81.07 | HH r -0.060
+2026-09-05 12:56:57 - INFO - Done. Best Val FFT: 9.09 BPM
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_mmpd_dual_nores_pt_best.pth | Params: 0.52M
+2026-09-05 12:56:58 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v6_roi64_real_test_s78_to_s83_n6_c0be2459_seq300_step30]，共找到 4674 个样本切片，极速准备就绪！
+[INFO] Test: 4674 samples | subjects [78, 79, 80, 81, 82, 83]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 13.31  RMSE: 19.43  StdErr: 14.16  Pearson: 0.3357
+  Acc<3: 39.6%  Acc<5: 45.1%  Acc<8: 49.6%
+  Valid: 4674/4674
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------

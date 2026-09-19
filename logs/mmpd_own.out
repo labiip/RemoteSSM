@@ -1,0 +1,20 @@
+[MMPD-OWN] train=22 val=5 test=6
+[MMPD-OWN] visible GPUs: 0
+2026-08-22 16:40:30 - INFO - RemoteSSM Finetuning | Device: cuda
+2026-08-22 16:40:31 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_train_s51_to_s72_n22_a8202b1e_seq300_step30]，共找到 14644 个样本切片，极速准备就绪！
+2026-08-22 16:42:33 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_val_s73_to_s77_n5_57bc15c1_seq300_step300]，共找到 495 个样本切片，极速准备就绪！
+2026-08-22 16:42:51 - INFO - Train: 14644 samples, subjects [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
+2026-08-22 16:42:51 - INFO - Val:   495 samples, subjects [73, 74, 75, 76, 77]
+2026-08-22 16:42:51 - INFO - HR labels: BVP-derived (SOTA-comparable)
+2026-08-22 16:42:51 - INFO - d=256 blocks=2 B=16 dropout=0.4 wd=0.005
+2026-08-22 16:42:51 - INFO - V11: random init + curriculum ([300] @ [30])
+2026-08-22 16:42:51 - INFO - GRL: warmup=30 adv_w=0.0 alpha_max=0.0
+~/.local/lib/python3.12/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+2026-08-22 16:42:52 - INFO - Params: 0.52M (V11 random init)
+~/rppg/rppg_project/train.py:351: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(resume_path, map_location=device)
+2026-08-22 16:42:56 - WARNING - scheduler state 不兼容, 重新初始化 LR 调度
+2026-08-22 16:42:56 - WARNING - disc_scheduler state 不兼容, 重新初始化 LR 调度
+2026-08-22 16:42:56 - INFO - Resumed at epoch 2 (best=29.61)
+2026-08-22 16:43:00 - INFO - Pre-flight check: BVP [-6.100, 5.169], HR [-0.653, -0.275], NaN=False

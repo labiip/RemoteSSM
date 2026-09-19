@@ -1,0 +1,10 @@
+2026-09-04 10:23:16 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_train_s01_to_s106_n40_1b42758a_seq300_step10]，共找到 9021 个样本切片，极速准备就绪！
+2026-09-04 10:23:17 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_val_s35_to_s108_n7_a9db59b9_seq300_step30]，共找到 891 个样本切片，极速准备就绪！
+2026-09-04 10:23:17 - INFO - PhysNet-3DCNN | Params: 0.77M | Device: cuda
+2026-09-04 10:23:17 - INFO - Train 9021 (step10) | Val 891 (step30)
+2026-09-04 10:23:17 - INFO - Epochs 40 | Adam lr=0.001 wd=0.0 | warmup 5+cosine | AMP off
+2026-09-04 10:23:21 - INFO - Resumed at epoch 41 (best=7.67)
+2026-09-04 10:23:23 - INFO - Pre-flight BVP range [-0.002, 0.002] NaN=False
+2026-09-04 10:23:23 - INFO - Done. Best Val FFT MAE: 7.67 BPM
+2026-09-04 10:23:23 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_test_s40_to_s49_n10_f763fd4e_seq300_step30]，共找到 481 个样本切片，极速准备就绪！
+2026-09-04 10:23:33 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_test_s109_to_s110_n2_95655dcc_seq300_step30]，共找到 696 个样本切片，极速准备就绪！

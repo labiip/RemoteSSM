@@ -1,0 +1,112 @@
+
+========================================================
+[UBFC-only → UBFC test (step30)] model=ubfc_only roi=32 cache=cardio_v5_bvphr
+========================================================
+[EVAL] RemoteSSM | Device: cuda
+~/.local/lib/python3.12/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+[INFO] Loaded: remotessm_ubfc_only_best.pth | Params: 0.52M
+[INFO] Test: 481 samples | subjects [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 1.04  RMSE: 4.69  StdErr: 4.58  Pearson: 0.8999
+  Acc<3: 96.5%  Acc<5: 97.7%  Acc<8: 97.9%
+  Valid: 481/481
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+========================================================
+[UBFC+PURE → UBFC test (step30)] model=ubfc_pure roi=32 cache=cardio_v5_bvphr
+========================================================
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_pure_best.pth | Params: 0.52M
+[INFO] Test: 481 samples | subjects [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 0.87  RMSE: 2.99  StdErr: 2.86  Pearson: 0.9573
+  Acc<3: 97.3%  Acc<5: 98.1%  Acc<8: 98.3%
+  Valid: 481/481
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+========================================================
+[UBFC+PURE → PURE test (step30)] model=ubfc_pure roi=32 cache=cardio_v5_bvphr
+========================================================
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_pure_best.pth | Params: 0.52M
+[INFO] Test: 696 samples | subjects [109, 110]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 0.31  RMSE: 0.44  StdErr: 0.31  Pearson: 0.9997
+  Acc<3: 99.9%  Acc<5: 100.0%  Acc<8: 100.0%
+  Valid: 696/696
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+========================================================
+[leave_mmpd: UBFC+PURE → MMPD ALL (step30)] model=ubfc_pure roi=32 cache=cardio_v5_bvphr
+========================================================
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_pure_best.pth | Params: 0.52M
+[INFO] Test: 23651 samples | subjects [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 20.76  RMSE: 29.57  StdErr: 21.05  Pearson: 0.1524
+  Acc<3: 30.5%  Acc<5: 35.2%  Acc<8: 39.2%
+  Valid: 23651/23651
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+========================================================
+[MMPD dual → MMPD test (step30)] model=mmpd_dual roi=64 cache=cardio_v6_roi64
+========================================================
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_mmpd_dual_pt_best.pth | Params: 0.52M
+[INFO] Test: 4674 samples | subjects [78, 79, 80, 81, 82, 83]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 13.55  RMSE: 19.56  StdErr: 14.11  Pearson: 0.3299
+  Acc<3: 37.8%  Acc<5: 43.2%  Acc<8: 48.6%
+  Valid: 4674/4674
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------

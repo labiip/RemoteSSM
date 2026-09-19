@@ -1,0 +1,21 @@
+[LODO-leave_mmpd] 用 UBFC+PURE 模型评估 MMPD 全部 33 受试者
+[EVAL] RemoteSSM | Device: cuda
+~/.local/lib/python3.12/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+[INFO] Loaded: remotessm_ubfc_pure_best.pth | Params: 0.52M
+[INFO] Test: 2749 samples | subjects [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 21.06  RMSE: 29.80  StdErr: 21.09  Pearson: 0.1389
+  Acc<3: 29.8%  Acc<5: 34.1%  Acc<8: 38.1%
+  Valid: 2749/2749
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------

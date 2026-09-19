@@ -1,0 +1,68 @@
+
+============================================================
+########## UBFC real-valued SSM -> UBFC test (step30) ##########
+============================================================
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_ablate_real_ssm_best.pth | Params: 0.52M
+[INFO] Test: 481 samples | subjects [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 1.30  RMSE: 4.56  StdErr: 4.37  Pearson: 0.9023
+  Acc<3: 94.8%  Acc<5: 96.0%  Acc<8: 96.7%
+  Valid: 481/481
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+============================================================
+########## MMPD dual w/o COB -> MMPD test (step30) ##########
+============================================================
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_mmpd_dual_nocob_pt_best.pth | Params: 0.52M
+[INFO] Test: 4674 samples | subjects [78, 79, 80, 81, 82, 83]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 17.60  RMSE: 23.87  StdErr: 16.12  Pearson: 0.1126
+  Acc<3: 31.3%  Acc<5: 35.7%  Acc<8: 39.3%
+  Valid: 4674/4674
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+============================================================
+########## MMPD dual main (val_step30) -> MMPD test (step30) ##########
+============================================================
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_mmpd_dual_pt_v30_best.pth | Params: 0.52M
+[INFO] Test: 4674 samples | subjects [78, 79, 80, 81, 82, 83]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 13.69  RMSE: 19.76  StdErr: 14.24  Pearson: 0.3117
+  Acc<3: 37.8%  Acc<5: 43.2%  Acc<8: 48.3%
+  Valid: 4674/4674
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+ALL AVAILABLE EVAL DONE

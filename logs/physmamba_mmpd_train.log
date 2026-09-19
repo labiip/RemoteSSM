@@ -1,0 +1,11 @@
+2026-09-08 14:46:23 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v6_roi64_real_train_s51_to_s72_n22_a8202b1e_seq300_step30]，共找到 14653 个样本切片，极速准备就绪！
+2026-09-08 14:54:06 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v6_roi64_real_val_s73_to_s77_n5_57bc15c1_seq300_step30]，共找到 4324 个样本切片，极速准备就绪！
+2026-09-08 14:54:53 - INFO - physmamba | Params: 0.73M | Device: cuda
+2026-09-08 14:54:53 - INFO - MMPD Train 14653 (step30) | Val 4324 (step30)
+2026-09-08 14:54:53 - INFO - Epochs 2 | Adam lr=0.001 wd=0.005 | warmup 5+cosine | AMP off | cudnn off
+2026-09-08 14:55:00 - INFO - Pre-flight BVP range [-0.129, 0.034] NaN=False
+2026-09-08 17:49:40 - INFO - Epoch   1/2 | Loss 0.8700 | Val FFT MAE 11.80 | Val r(HR) 0.204
+2026-09-08 17:49:40 - INFO -   ✓ Best: 11.80 BPM
+2026-09-08 20:52:48 - INFO - Epoch   2/2 | Loss 0.8507 | Val FFT MAE 12.81 | Val r(HR) 0.144
+2026-09-08 20:52:48 - INFO - Done. Best Val FFT MAE: 11.80 BPM
+2026-09-08 20:52:51 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v6_roi64_real_test_s78_to_s83_n6_c0be2459_seq300_step30]，共找到 4674 个样本切片，极速准备就绪！

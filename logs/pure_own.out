@@ -1,0 +1,58 @@
+[PURE-OWN] train=6 val=2 test=2
+[PURE-OWN] visible GPUs: 0
+2026-08-24 10:38:43 - INFO - RemoteSSM Finetuning | Device: cuda
+2026-08-24 10:38:43 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_train_s101_to_s106_n6_fe4fe4ec_seq300_step10]，共找到 5683 个样本切片，极速准备就绪！
+2026-08-24 10:38:43 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_val_s107_to_s108_n2_7a103fe4_seq300_step300]，共找到 71 个样本切片，极速准备就绪！
+2026-08-24 10:38:43 - INFO - Train: 5683 samples, subjects [101, 102, 103, 104, 105, 106]
+2026-08-24 10:38:43 - INFO - Val:   71 samples, subjects [107, 108]
+2026-08-24 10:38:43 - INFO - HR labels: BVP-derived (SOTA-comparable)
+2026-08-24 10:38:43 - INFO - d=256 blocks=2 B=16 dropout=0.4 wd=0.005
+2026-08-24 10:38:43 - INFO - V11: random init + curriculum ([300] @ [20])
+2026-08-24 10:38:43 - INFO - GRL: warmup=30 adv_w=0.0 alpha_max=0.0
+~/.local/lib/python3.12/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+2026-08-24 10:38:44 - INFO - Params: 0.52M (V11 random init)
+2026-08-24 10:38:48 - INFO - Pre-flight check: BVP [-2.397, 2.948], HR [-0.343, 0.212], NaN=False
+~/.local/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:224: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+2026-08-24 10:44:20 - INFO - Epoch   1/20 | Len=300 | Loss 3605.4565 | Val FFT 32.92 | Val r(HR) 0.245 | HH MAE 87.63 | HH r -0.100
+2026-08-24 10:44:20 - INFO -   ✓ Best: 32.92 BPM
+2026-08-24 10:50:04 - INFO - Epoch   2/20 | Len=300 | Loss 2422.7526 | Val FFT 37.51 | Val r(HR) 0.190 | HH MAE 87.66 | HH r -0.210
+2026-08-24 10:55:38 - INFO - Epoch   3/20 | Len=300 | Loss 1942.3883 | Val FFT 34.21 | Val r(HR) 0.371 | HH MAE 87.62 | HH r -0.340
+2026-08-24 11:01:11 - INFO - Epoch   4/20 | Len=300 | Loss 1653.6701 | Val FFT 36.61 | Val r(HR) 0.116 | HH MAE 87.49 | HH r -0.302
+2026-08-24 11:06:44 - INFO - Epoch   5/20 | Len=300 | Loss 1416.6851 | Val FFT 36.12 | Val r(HR) 0.175 | HH MAE 87.47 | HH r -0.049
+2026-08-24 11:12:16 - INFO - Epoch   6/20 | Len=300 | Loss 1315.4138 | Val FFT 36.12 | Val r(HR) 0.201 | HH MAE 87.44 | HH r -0.102
+2026-08-24 11:17:50 - INFO - Epoch   7/20 | Len=300 | Loss 1266.3726 | Val FFT 35.13 | Val r(HR) 0.359 | HH MAE 87.44 | HH r 0.139
+2026-08-24 11:23:23 - INFO - Epoch   8/20 | Len=300 | Loss 1238.5365 | Val FFT 35.35 | Val r(HR) 0.290 | HH MAE 87.46 | HH r -0.060
+2026-08-24 11:28:57 - INFO - Epoch   9/20 | Len=300 | Loss 1212.8689 | Val FFT 35.31 | Val r(HR) 0.260 | HH MAE 87.44 | HH r -0.000
+2026-08-24 11:34:31 - INFO - Epoch  10/20 | Len=300 | Loss 1199.6462 | Val FFT 34.92 | Val r(HR) 0.345 | HH MAE 87.48 | HH r -0.099
+2026-08-24 11:40:05 - INFO - Epoch  11/20 | Len=300 | Loss 1185.2718 | Val FFT 34.59 | Val r(HR) 0.391 | HH MAE 87.48 | HH r -0.030
+2026-08-24 11:45:38 - INFO - Epoch  12/20 | Len=300 | Loss 1173.0381 | Val FFT 35.03 | Val r(HR) 0.304 | HH MAE 87.48 | HH r -0.018
+2026-08-24 11:51:13 - INFO - Epoch  13/20 | Len=300 | Loss 1165.3251 | Val FFT 35.20 | Val r(HR) 0.244 | HH MAE 87.46 | HH r 0.040
+2026-08-24 11:56:46 - INFO - Epoch  14/20 | Len=300 | Loss 1155.4493 | Val FFT 35.31 | Val r(HR) 0.221 | HH MAE 87.47 | HH r -0.040
+2026-08-24 12:02:19 - INFO - Epoch  15/20 | Len=300 | Loss 1151.0962 | Val FFT 35.06 | Val r(HR) 0.272 | HH MAE 87.45 | HH r -0.082
+2026-08-24 12:07:53 - INFO - Epoch  16/20 | Len=300 | Loss 1143.4637 | Val FFT 34.94 | Val r(HR) 0.284 | HH MAE 87.44 | HH r -0.011
+2026-08-24 12:13:31 - INFO - Epoch  17/20 | Len=300 | Loss 1143.0906 | Val FFT 34.63 | Val r(HR) 0.309 | HH MAE 87.45 | HH r -0.048
+2026-08-24 12:19:04 - INFO - Epoch  18/20 | Len=300 | Loss 1138.7792 | Val FFT 34.59 | Val r(HR) 0.321 | HH MAE 87.45 | HH r -0.045
+2026-08-24 12:24:37 - INFO - Epoch  19/20 | Len=300 | Loss 1135.9669 | Val FFT 34.62 | Val r(HR) 0.310 | HH MAE 87.46 | HH r -0.046
+2026-08-24 12:30:11 - INFO - Epoch  20/20 | Len=300 | Loss 1134.5193 | Val FFT 34.65 | Val r(HR) 0.313 | HH MAE 87.46 | HH r -0.045
+2026-08-24 12:30:12 - INFO - Done. Best Val FFT: 32.92 BPM
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_pure_own_best.pth | Params: 0.52M
+2026-08-24 12:30:12 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_test_s109_to_s110_n2_95655dcc_seq300_step300]，共找到 72 个样本切片，极速准备就绪！
+[INFO] Test: 72 samples | subjects [109, 110]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 30.09  RMSE: 33.84  StdErr: 15.49  Pearson: 0.0681
+  Acc<3: 1.4%  Acc<5: 1.4%  Acc<8: 5.6%
+  Valid: 72/72
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------

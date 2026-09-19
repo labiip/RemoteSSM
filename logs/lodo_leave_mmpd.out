@@ -1,0 +1,153 @@
+[LODO] leave_mmpd: train=40 val=7 test=33
+[LODO] visible GPUs: 3
+2026-08-20 10:57:38 - INFO - RemoteSSM Finetuning | Device: cuda
+2026-08-20 10:57:38 - INFO - ⏳ 未检测到实数缓存 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v4b_noalign_real_train_s01_to_s106_n40_1b42758a_seq300_step10]，开始执行特征预处理 (仅需运行一次)...
+2026-08-20 10:57:39 - INFO - [Dataset-train] 正在处理 61 个受试者...
+2026-08-20 10:57:48 - INFO - [train] 预处理进度: 500/10410
+2026-08-20 10:57:49 - INFO - [train] 预处理进度: 1000/10410
+2026-08-20 10:57:50 - INFO - [train] 预处理进度: 1500/10410
+2026-08-20 10:57:52 - INFO - [train] 预处理进度: 2000/10410
+2026-08-20 10:57:53 - INFO - [train] 预处理进度: 2500/10410
+2026-08-20 10:57:55 - INFO - [train] 预处理进度: 3000/10410
+2026-08-20 10:57:56 - INFO - [train] 预处理进度: 3500/10410
+2026-08-20 10:57:58 - INFO - [train] 预处理进度: 4000/10410
+2026-08-20 10:58:00 - INFO - [train] 预处理进度: 4500/10410
+2026-08-20 10:58:01 - INFO - [train] 预处理进度: 5000/10410
+2026-08-20 10:58:02 - INFO - [train] 预处理进度: 5500/10410
+2026-08-20 10:58:04 - INFO - [train] 预处理进度: 6000/10410
+2026-08-20 10:58:06 - INFO - [train] 预处理进度: 6500/10410
+2026-08-20 10:58:07 - INFO - [train] 预处理进度: 7000/10410
+2026-08-20 10:58:08 - INFO - [train] 预处理进度: 7500/10410
+2026-08-20 10:58:09 - INFO - [train] 预处理进度: 8000/10410
+2026-08-20 10:58:11 - INFO - [train] 预处理进度: 8500/10410
+2026-08-20 10:58:12 - INFO - [train] 预处理进度: 9000/10410
+2026-08-20 10:58:13 - INFO - [train] 预处理进度: 9500/10410
+2026-08-20 10:58:14 - INFO - [train] 预处理进度: 10000/10410
+2026-08-20 10:58:16 - INFO - 💾 [train] 实数缓存完成！保留: 9021, 过滤: 1389
+2026-08-20 10:58:21 - INFO - ⏳ 未检测到实数缓存 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v4b_noalign_real_val_s35_to_s108_n7_a9db59b9_seq300_step300]，开始执行特征预处理 (仅需运行一次)...
+2026-08-20 10:58:21 - INFO - [Dataset-val] 正在处理 17 个受试者...
+2026-08-20 10:58:22 - INFO - 💾 [val] 实数缓存完成！保留: 95, 过滤: 12
+2026-08-20 10:58:22 - INFO - Train: 9021 samples, subjects [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 101, 102, 103, 104, 105, 106]
+2026-08-20 10:58:22 - INFO - Val:   95 samples, subjects [35, 36, 37, 38, 39, 107, 108]
+2026-08-20 10:58:22 - INFO - HR labels: ECG gold-standard
+2026-08-20 10:58:22 - INFO - d=256 blocks=2 B=16 dropout=0.15 wd=0.001
+2026-08-20 10:58:22 - INFO - V11: random init + curriculum ([300] @ [300])
+2026-08-20 10:58:22 - INFO - GRL: warmup=80 adv_w=0.0 alpha_max=0.0
+2026-08-20 10:58:23 - INFO - Params: 0.52M (V11 random init)
+2026-08-20 10:58:29 - INFO - Pre-flight check: BVP [-0.256, 0.340], HR [-0.311, -0.284], NaN=False
+~/.local/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:224: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+2026-08-20 11:07:24 - INFO - Epoch   1/300 | Len=300 | Loss 1057.2405 | Val FFT 8.71 | Val r(HR) 0.917 | HH MAE 86.03 | HH r -0.306
+2026-08-20 11:07:24 - INFO -   ✓ Best: 8.71 BPM
+2026-08-20 11:16:20 - INFO - Epoch   2/300 | Len=300 | Loss 824.9748 | Val FFT 17.19 | Val r(HR) 0.695 | HH MAE 81.62 | HH r -0.321
+2026-08-20 11:25:17 - INFO - Epoch   3/300 | Len=300 | Loss 690.9465 | Val FFT 17.98 | Val r(HR) 0.625 | HH MAE 76.30 | HH r -0.208
+2026-08-20 11:34:12 - INFO - Epoch   4/300 | Len=300 | Loss 633.4971 | Val FFT 21.40 | Val r(HR) 0.545 | HH MAE 70.98 | HH r -0.195
+2026-08-20 11:43:10 - INFO - Epoch   5/300 | Len=300 | Loss 597.4478 | Val FFT 28.33 | Val r(HR) 0.353 | HH MAE 65.81 | HH r -0.107
+2026-08-20 11:52:08 - INFO - Epoch   6/300 | Len=300 | Loss 570.9906 | Val FFT 29.07 | Val r(HR) 0.389 | HH MAE 60.38 | HH r -0.156
+2026-08-20 12:01:03 - INFO - Epoch   7/300 | Len=300 | Loss 547.1412 | Val FFT 30.96 | Val r(HR) 0.312 | HH MAE 54.64 | HH r -0.111
+2026-08-20 12:10:01 - INFO - Epoch   8/300 | Len=300 | Loss 522.2914 | Val FFT 29.40 | Val r(HR) 0.355 | HH MAE 48.51 | HH r 0.046
+2026-08-20 12:18:59 - INFO - Epoch   9/300 | Len=300 | Loss 503.8995 | Val FFT 28.24 | Val r(HR) 0.347 | HH MAE 42.67 | HH r -0.144
+2026-08-20 12:27:54 - INFO - Epoch  10/300 | Len=300 | Loss 484.3935 | Val FFT 31.25 | Val r(HR) 0.256 | HH MAE 38.54 | HH r -0.157
+2026-08-20 12:36:52 - INFO - Epoch  11/300 | Len=300 | Loss 469.4239 | Val FFT 29.41 | Val r(HR) 0.340 | HH MAE 36.76 | HH r -0.134
+2026-08-20 12:45:47 - INFO - Epoch  12/300 | Len=300 | Loss 457.6078 | Val FFT 31.47 | Val r(HR) 0.220 | HH MAE 35.75 | HH r -0.185
+2026-08-20 12:54:43 - INFO - Epoch  13/300 | Len=300 | Loss 451.1916 | Val FFT 29.13 | Val r(HR) 0.320 | HH MAE 35.35 | HH r 0.165
+2026-08-20 13:03:40 - INFO - Epoch  14/300 | Len=300 | Loss 448.3306 | Val FFT 30.37 | Val r(HR) 0.271 | HH MAE 35.07 | HH r 0.154
+2026-08-20 13:12:36 - INFO - Epoch  15/300 | Len=300 | Loss 440.9780 | Val FFT 29.54 | Val r(HR) 0.291 | HH MAE 34.39 | HH r 0.232
+2026-08-20 13:21:32 - INFO - Epoch  16/300 | Len=300 | Loss 433.7150 | Val FFT 29.01 | Val r(HR) 0.336 | HH MAE 33.98 | HH r 0.165
+2026-08-20 13:30:27 - INFO - Epoch  17/300 | Len=300 | Loss 426.6250 | Val FFT 27.98 | Val r(HR) 0.350 | HH MAE 33.04 | HH r 0.387
+2026-08-20 13:39:24 - INFO - Epoch  18/300 | Len=300 | Loss 421.9441 | Val FFT 30.47 | Val r(HR) 0.302 | HH MAE 32.99 | HH r 0.138
+2026-08-20 13:48:21 - INFO - Epoch  19/300 | Len=300 | Loss 418.9012 | Val FFT 29.09 | Val r(HR) 0.308 | HH MAE 32.73 | HH r 0.127
+2026-08-20 13:57:16 - INFO - Epoch  20/300 | Len=300 | Loss 415.2493 | Val FFT 29.65 | Val r(HR) 0.297 | HH MAE 33.05 | HH r 0.064
+2026-08-20 14:06:12 - INFO - Epoch  21/300 | Len=300 | Loss 412.7326 | Val FFT 30.54 | Val r(HR) 0.254 | HH MAE 31.94 | HH r 0.163
+2026-08-20 14:15:11 - INFO - Epoch  22/300 | Len=300 | Loss 410.8008 | Val FFT 29.77 | Val r(HR) 0.305 | HH MAE 32.88 | HH r 0.081
+2026-08-20 14:24:07 - INFO - Epoch  23/300 | Len=300 | Loss 407.9083 | Val FFT 30.68 | Val r(HR) 0.247 | HH MAE 32.62 | HH r 0.095
+2026-08-20 14:33:04 - INFO - Epoch  24/300 | Len=300 | Loss 406.5725 | Val FFT 30.08 | Val r(HR) 0.269 | HH MAE 32.92 | HH r 0.074
+2026-08-20 14:42:01 - INFO - Epoch  25/300 | Len=300 | Loss 404.9745 | Val FFT 30.37 | Val r(HR) 0.295 | HH MAE 32.93 | HH r 0.068
+2026-08-20 14:50:55 - INFO - Epoch  26/300 | Len=300 | Loss 405.2114 | Val FFT 29.61 | Val r(HR) 0.278 | HH MAE 32.86 | HH r 0.075
+2026-08-20 14:59:54 - INFO - Epoch  27/300 | Len=300 | Loss 404.5858 | Val FFT 29.85 | Val r(HR) 0.259 | HH MAE 30.91 | HH r 0.181
+2026-08-20 15:08:50 - INFO - Epoch  28/300 | Len=300 | Loss 402.8275 | Val FFT 30.42 | Val r(HR) 0.265 | HH MAE 31.65 | HH r 0.162
+2026-08-20 15:17:47 - INFO - Epoch  29/300 | Len=300 | Loss 401.3771 | Val FFT 30.85 | Val r(HR) 0.266 | HH MAE 31.92 | HH r 0.141
+2026-08-20 15:26:43 - INFO - Epoch  30/300 | Len=300 | Loss 401.5520 | Val FFT 30.13 | Val r(HR) 0.321 | HH MAE 31.77 | HH r 0.140
+2026-08-20 15:35:40 - INFO - Epoch  31/300 | Len=300 | Loss 400.1971 | Val FFT 29.22 | Val r(HR) 0.309 | HH MAE 31.64 | HH r 0.130
+2026-08-20 15:44:36 - INFO - Epoch  32/300 | Len=300 | Loss 400.7828 | Val FFT 30.64 | Val r(HR) 0.273 | HH MAE 31.84 | HH r 0.143
+2026-08-20 15:53:33 - INFO - Epoch  33/300 | Len=300 | Loss 399.4721 | Val FFT 30.23 | Val r(HR) 0.299 | HH MAE 32.48 | HH r 0.101
+2026-08-20 16:02:28 - INFO - Epoch  34/300 | Len=300 | Loss 398.8928 | Val FFT 30.65 | Val r(HR) 0.237 | HH MAE 32.43 | HH r 0.103
+2026-08-20 16:11:25 - INFO - Epoch  35/300 | Len=300 | Loss 398.8394 | Val FFT 30.16 | Val r(HR) 0.253 | HH MAE 32.45 | HH r 0.103
+2026-08-20 16:20:20 - INFO - Epoch  36/300 | Len=300 | Loss 398.5133 | Val FFT 30.91 | Val r(HR) 0.266 | HH MAE 33.26 | HH r 0.044
+2026-08-20 16:29:15 - INFO - Epoch  37/300 | Len=300 | Loss 397.5072 | Val FFT 30.24 | Val r(HR) 0.295 | HH MAE 33.46 | HH r 0.034
+2026-08-20 16:38:13 - INFO - Epoch  38/300 | Len=300 | Loss 397.1698 | Val FFT 30.82 | Val r(HR) 0.209 | HH MAE 32.94 | HH r 0.051
+2026-08-20 16:47:09 - INFO - Epoch  39/300 | Len=300 | Loss 397.0500 | Val FFT 31.62 | Val r(HR) 0.286 | HH MAE 32.93 | HH r 0.063
+2026-08-20 16:56:05 - INFO - Epoch  40/300 | Len=300 | Loss 398.6282 | Val FFT 30.15 | Val r(HR) 0.278 | HH MAE 33.15 | HH r 0.058
+2026-08-20 17:05:02 - INFO - Epoch  41/300 | Len=300 | Loss 397.1399 | Val FFT 29.80 | Val r(HR) 0.291 | HH MAE 32.41 | HH r 0.102
+2026-08-20 17:13:56 - INFO - Epoch  42/300 | Len=300 | Loss 396.6408 | Val FFT 30.71 | Val r(HR) 0.244 | HH MAE 32.42 | HH r 0.092
+2026-08-20 17:22:52 - INFO - Epoch  43/300 | Len=300 | Loss 396.3535 | Val FFT 31.93 | Val r(HR) 0.265 | HH MAE 32.32 | HH r 0.106
+2026-08-20 17:31:47 - INFO - Epoch  44/300 | Len=300 | Loss 395.8806 | Val FFT 30.07 | Val r(HR) 0.313 | HH MAE 32.56 | HH r 0.096
+2026-08-20 17:40:42 - INFO - Epoch  45/300 | Len=300 | Loss 395.1500 | Val FFT 31.13 | Val r(HR) 0.260 | HH MAE 32.17 | HH r 0.112
+2026-08-20 17:49:40 - INFO - Epoch  46/300 | Len=300 | Loss 394.1062 | Val FFT 30.43 | Val r(HR) 0.335 | HH MAE 31.67 | HH r 0.145
+2026-08-20 17:58:37 - INFO - Epoch  47/300 | Len=300 | Loss 395.0248 | Val FFT 30.50 | Val r(HR) 0.319 | HH MAE 32.40 | HH r 0.091
+2026-08-20 18:07:33 - INFO - Epoch  48/300 | Len=300 | Loss 394.9798 | Val FFT 30.67 | Val r(HR) 0.275 | HH MAE 32.73 | HH r 0.082
+2026-08-20 18:16:31 - INFO - Epoch  49/300 | Len=300 | Loss 394.3069 | Val FFT 31.02 | Val r(HR) 0.273 | HH MAE 32.56 | HH r 0.095
+2026-08-20 18:25:26 - INFO - Epoch  50/300 | Len=300 | Loss 393.3571 | Val FFT 28.53 | Val r(HR) 0.330 | HH MAE 33.05 | HH r 0.051
+2026-08-20 18:34:23 - INFO - Epoch  51/300 | Len=300 | Loss 393.6046 | Val FFT 29.89 | Val r(HR) 0.258 | HH MAE 32.07 | HH r 0.105
+2026-08-20 18:43:21 - INFO - Epoch  52/300 | Len=300 | Loss 393.0730 | Val FFT 30.54 | Val r(HR) 0.300 | HH MAE 31.82 | HH r 0.140
+2026-08-20 18:52:16 - INFO - Epoch  53/300 | Len=300 | Loss 393.4975 | Val FFT 30.70 | Val r(HR) 0.280 | HH MAE 32.59 | HH r 0.089
+2026-08-20 19:01:14 - INFO - Epoch  54/300 | Len=300 | Loss 392.4907 | Val FFT 30.81 | Val r(HR) 0.289 | HH MAE 32.35 | HH r 0.087
+2026-08-20 19:10:11 - INFO - Epoch  55/300 | Len=300 | Loss 393.4906 | Val FFT 31.04 | Val r(HR) 0.285 | HH MAE 32.37 | HH r 0.089
+2026-08-20 19:19:06 - INFO - Epoch  56/300 | Len=300 | Loss 395.2860 | Val FFT 32.39 | Val r(HR) 0.226 | HH MAE 32.43 | HH r 0.088
+2026-08-20 19:28:03 - INFO - Epoch  57/300 | Len=300 | Loss 394.5395 | Val FFT 30.67 | Val r(HR) 0.272 | HH MAE 32.48 | HH r 0.078
+2026-08-20 19:36:57 - INFO - Epoch  58/300 | Len=300 | Loss 395.4589 | Val FFT 32.56 | Val r(HR) 0.247 | HH MAE 32.43 | HH r 0.085
+2026-08-20 19:45:54 - INFO - Epoch  59/300 | Len=300 | Loss 393.3076 | Val FFT 31.66 | Val r(HR) 0.250 | HH MAE 33.30 | HH r 0.031
+2026-08-20 19:54:50 - INFO - Epoch  60/300 | Len=300 | Loss 392.5075 | Val FFT 31.93 | Val r(HR) 0.265 | HH MAE 32.88 | HH r 0.061
+2026-08-20 20:03:46 - INFO - Epoch  61/300 | Len=300 | Loss 392.5257 | Val FFT 32.07 | Val r(HR) 0.196 | HH MAE 32.58 | HH r 0.077
+2026-08-20 20:12:45 - INFO - Epoch  62/300 | Len=300 | Loss 393.2239 | Val FFT 29.78 | Val r(HR) 0.311 | HH MAE 32.72 | HH r 0.080
+2026-08-20 20:21:42 - INFO - Epoch  63/300 | Len=300 | Loss 392.0076 | Val FFT 32.13 | Val r(HR) 0.260 | HH MAE 32.95 | HH r 0.058
+2026-08-20 20:30:38 - INFO - Epoch  64/300 | Len=300 | Loss 391.3764 | Val FFT 30.49 | Val r(HR) 0.286 | HH MAE 33.03 | HH r 0.052
+2026-08-20 20:39:33 - INFO - Epoch  65/300 | Len=300 | Loss 390.9619 | Val FFT 31.39 | Val r(HR) 0.307 | HH MAE 33.14 | HH r 0.052
+2026-08-20 20:48:28 - INFO - Epoch  66/300 | Len=300 | Loss 391.4004 | Val FFT 30.53 | Val r(HR) 0.284 | HH MAE 32.68 | HH r 0.064
+2026-08-20 20:57:26 - INFO - Epoch  67/300 | Len=300 | Loss 390.9213 | Val FFT 32.51 | Val r(HR) 0.237 | HH MAE 32.77 | HH r 0.068
+2026-08-20 21:06:22 - INFO - Epoch  68/300 | Len=300 | Loss 392.7308 | Val FFT 30.67 | Val r(HR) 0.309 | HH MAE 32.79 | HH r 0.046
+2026-08-20 21:15:18 - INFO - Epoch  69/300 | Len=300 | Loss 390.3151 | Val FFT 31.66 | Val r(HR) 0.263 | HH MAE 33.35 | HH r 0.033
+2026-08-20 21:24:15 - INFO - Epoch  70/300 | Len=300 | Loss 390.5445 | Val FFT 30.47 | Val r(HR) 0.290 | HH MAE 32.90 | HH r 0.054
+2026-08-20 21:33:10 - INFO - Epoch  71/300 | Len=300 | Loss 390.2800 | Val FFT 31.15 | Val r(HR) 0.309 | HH MAE 33.22 | HH r 0.042
+2026-08-20 21:42:06 - INFO - Epoch  72/300 | Len=300 | Loss 389.9750 | Val FFT 31.87 | Val r(HR) 0.284 | HH MAE 33.42 | HH r 0.037
+2026-08-20 21:51:04 - INFO - Epoch  73/300 | Len=300 | Loss 389.5634 | Val FFT 30.15 | Val r(HR) 0.299 | HH MAE 33.44 | HH r 0.034
+2026-08-20 22:00:01 - INFO - Epoch  74/300 | Len=300 | Loss 389.7950 | Val FFT 30.11 | Val r(HR) 0.296 | HH MAE 33.47 | HH r 0.024
+2026-08-20 22:08:57 - INFO - Epoch  75/300 | Len=300 | Loss 389.6015 | Val FFT 32.06 | Val r(HR) 0.249 | HH MAE 33.10 | HH r 0.054
+2026-08-20 22:17:54 - INFO - Epoch  76/300 | Len=300 | Loss 389.1708 | Val FFT 31.43 | Val r(HR) 0.248 | HH MAE 33.54 | HH r 0.024
+2026-08-20 22:26:50 - INFO - Epoch  77/300 | Len=300 | Loss 391.1549 | Val FFT 31.27 | Val r(HR) 0.288 | HH MAE 32.28 | HH r 0.107
+2026-08-20 22:35:47 - INFO - Epoch  78/300 | Len=300 | Loss 389.5246 | Val FFT 31.13 | Val r(HR) 0.304 | HH MAE 32.94 | HH r 0.065
+2026-08-20 22:44:44 - INFO - Epoch  79/300 | Len=300 | Loss 388.5391 | Val FFT 31.58 | Val r(HR) 0.297 | HH MAE 32.73 | HH r 0.071
+2026-08-20 22:53:38 - INFO - Epoch  80/300 | Len=300 | Loss 388.2974 | Val FFT 31.54 | Val r(HR) 0.236 | HH MAE 32.98 | HH r 0.053
+2026-08-20 23:02:32 - INFO - Epoch  81/300 | Len=300 | Loss 388.9085 | Val FFT 31.69 | Val r(HR) 0.239 | HH MAE 32.80 | HH r 0.070
+2026-08-20 23:11:27 - INFO - Epoch  82/300 | Len=300 | Loss 388.6607 | Val FFT 32.17 | Val r(HR) 0.278 | HH MAE 33.44 | HH r 0.024
+2026-08-20 23:20:24 - INFO - Epoch  83/300 | Len=300 | Loss 389.0106 | Val FFT 32.31 | Val r(HR) 0.264 | HH MAE 33.47 | HH r 0.020
+2026-08-20 23:29:21 - INFO - Epoch  84/300 | Len=300 | Loss 388.4066 | Val FFT 31.05 | Val r(HR) 0.263 | HH MAE 33.23 | HH r 0.048
+2026-08-20 23:38:17 - INFO - Epoch  85/300 | Len=300 | Loss 388.7884 | Val FFT 32.70 | Val r(HR) 0.196 | HH MAE 33.03 | HH r 0.050
+2026-08-20 23:47:14 - INFO - Epoch  86/300 | Len=300 | Loss 387.6311 | Val FFT 31.46 | Val r(HR) 0.270 | HH MAE 33.25 | HH r 0.036
+2026-08-20 23:56:10 - INFO - Epoch  87/300 | Len=300 | Loss 387.9507 | Val FFT 32.69 | Val r(HR) 0.206 | HH MAE 33.31 | HH r 0.035
+2026-08-21 00:05:07 - INFO - Epoch  88/300 | Len=300 | Loss 386.9779 | Val FFT 31.98 | Val r(HR) 0.257 | HH MAE 33.33 | HH r 0.035
+2026-08-21 00:14:04 - INFO - Epoch  89/300 | Len=300 | Loss 387.7918 | Val FFT 31.72 | Val r(HR) 0.243 | HH MAE 32.86 | HH r 0.052
+2026-08-21 00:23:02 - INFO - Epoch  90/300 | Len=300 | Loss 387.3625 | Val FFT 32.26 | Val r(HR) 0.238 | HH MAE 32.38 | HH r 0.091
+2026-08-21 00:31:59 - INFO - Epoch  91/300 | Len=300 | Loss 387.7986 | Val FFT 32.76 | Val r(HR) 0.272 | HH MAE 32.83 | HH r 0.058
+2026-08-21 00:40:56 - INFO - Epoch  92/300 | Len=300 | Loss 387.2819 | Val FFT 31.39 | Val r(HR) 0.292 | HH MAE 33.02 | HH r 0.054
+2026-08-21 00:49:53 - INFO - Epoch  93/300 | Len=300 | Loss 387.5985 | Val FFT 31.94 | Val r(HR) 0.268 | HH MAE 32.25 | HH r 0.113
+2026-08-21 00:58:50 - INFO - Epoch  94/300 | Len=300 | Loss 387.0769 | Val FFT 32.20 | Val r(HR) 0.282 | HH MAE 32.18 | HH r 0.104
+2026-08-21 01:07:47 - INFO - Epoch  95/300 | Len=300 | Loss 386.7221 | Val FFT 32.10 | Val r(HR) 0.270 | HH MAE 32.89 | HH r 0.064
+2026-08-21 01:16:44 - INFO - Epoch  96/300 | Len=300 | Loss 387.1434 | Val FFT 32.32 | Val r(HR) 0.195 | HH MAE 32.82 | HH r 0.065
+2026-08-21 01:25:41 - INFO - Epoch  97/300 | Len=300 | Loss 387.0656 | Val FFT 32.25 | Val r(HR) 0.286 | HH MAE 32.62 | HH r 0.073
+2026-08-21 01:34:37 - INFO - Epoch  98/300 | Len=300 | Loss 386.3508 | Val FFT 32.57 | Val r(HR) 0.256 | HH MAE 32.45 | HH r 0.078
+2026-08-21 01:43:35 - INFO - Epoch  99/300 | Len=300 | Loss 386.4025 | Val FFT 31.03 | Val r(HR) 0.229 | HH MAE 31.96 | HH r 0.102
+2026-08-21 01:52:31 - INFO - Epoch 100/300 | Len=300 | Loss 386.4389 | Val FFT 31.40 | Val r(HR) 0.270 | HH MAE 33.18 | HH r 0.046
+2026-08-21 02:01:27 - INFO - Epoch 101/300 | Len=300 | Loss 386.9359 | Val FFT 32.69 | Val r(HR) 0.206 | HH MAE 32.79 | HH r 0.055
+2026-08-21 02:10:24 - INFO - Epoch 102/300 | Len=300 | Loss 386.2754 | Val FFT 33.59 | Val r(HR) 0.147 | HH MAE 32.83 | HH r 0.060
+2026-08-21 02:19:20 - INFO - Epoch 103/300 | Len=300 | Loss 386.4856 | Val FFT 32.76 | Val r(HR) 0.185 | HH MAE 33.23 | HH r 0.032
+2026-08-21 02:28:16 - INFO - Epoch 104/300 | Len=300 | Loss 385.9952 | Val FFT 31.98 | Val r(HR) 0.191 | HH MAE 32.70 | HH r 0.063
+2026-08-21 02:37:12 - INFO - Epoch 105/300 | Len=300 | Loss 386.2768 | Val FFT 32.72 | Val r(HR) 0.200 | HH MAE 32.99 | HH r 0.043
+2026-08-21 02:46:11 - INFO - Epoch 106/300 | Len=300 | Loss 386.1497 | Val FFT 31.77 | Val r(HR) 0.250 | HH MAE 32.79 | HH r 0.060
+2026-08-21 02:55:07 - INFO - Epoch 107/300 | Len=300 | Loss 385.6333 | Val FFT 30.70 | Val r(HR) 0.272 | HH MAE 32.78 | HH r 0.063
+2026-08-21 03:04:04 - INFO - Epoch 108/300 | Len=300 | Loss 385.1374 | Val FFT 31.62 | Val r(HR) 0.265 | HH MAE 32.68 | HH r 0.066
+2026-08-21 03:13:00 - INFO - Epoch 109/300 | Len=300 | Loss 385.9612 | Val FFT 31.58 | Val r(HR) 0.249 | HH MAE 32.29 | HH r 0.089
+2026-08-21 03:21:56 - INFO - Epoch 110/300 | Len=300 | Loss 385.3596 | Val FFT 32.14 | Val r(HR) 0.210 | HH MAE 32.60 | HH r 0.075
+2026-08-21 03:30:51 - INFO - Epoch 111/300 | Len=300 | Loss 385.4167 | Val FFT 31.75 | Val r(HR) 0.206 | HH MAE 32.78 | HH r 0.064
+2026-08-21 03:39:48 - INFO - Epoch 112/300 | Len=300 | Loss 385.5557 | Val FFT 31.75 | Val r(HR) 0.244 | HH MAE 32.35 | HH r 0.090
+2026-08-21 03:48:45 - INFO - Epoch 113/300 | Len=300 | Loss 385.0081 | Val FFT 32.35 | Val r(HR) 0.186 | HH MAE 32.65 | HH r 0.076

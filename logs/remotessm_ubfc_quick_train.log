@@ -1,0 +1,35 @@
+2026-08-22 07:31:24 - INFO - RemoteSSM Finetuning | Device: cuda
+2026-08-22 07:31:24 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_train_s01_to_s34_n34_9903cae0_seq300_step10]，共找到 3338 个样本切片，极速准备就绪！
+2026-08-22 07:31:25 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_val_s35_to_s39_n5_7300592e_seq300_step300]，共找到 24 个样本切片，极速准备就绪！
+2026-08-22 07:31:25 - INFO - Train: 3338 samples, subjects [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34]
+2026-08-22 07:31:25 - INFO - Val:   24 samples, subjects [35, 36, 37, 38, 39]
+2026-08-22 07:31:25 - INFO - HR labels: BVP-derived (SOTA-comparable)
+2026-08-22 07:31:25 - INFO - d=256 blocks=2 B=16 dropout=0.4 wd=0.005
+2026-08-22 07:31:25 - INFO - V11: random init + curriculum ([300] @ [20])
+2026-08-22 07:31:25 - INFO - GRL: warmup=30 adv_w=0.05 alpha_max=0.3
+2026-08-22 07:31:25 - INFO - Params: 0.52M (V11 random init)
+2026-08-22 07:31:30 - INFO - Pre-flight check: BVP [-2.601, 2.712], HR [-0.432, 0.147], NaN=False
+2026-08-22 07:34:48 - INFO - Epoch   1/20 | Len=300 | Loss 557.4079 | Val FFT 13.73 | Val r(HR) 0.768 | HH MAE 97.99 | HH r 0.206
+2026-08-22 07:34:49 - INFO -   ✓ Best: 13.73 BPM
+2026-08-22 07:38:07 - INFO - Epoch   2/20 | Len=300 | Loss 451.2225 | Val FFT 14.74 | Val r(HR) 0.748 | HH MAE 97.97 | HH r 0.086
+2026-08-22 07:41:25 - INFO - Epoch   3/20 | Len=300 | Loss 398.8221 | Val FFT 11.10 | Val r(HR) 0.842 | HH MAE 98.05 | HH r -0.137
+2026-08-22 07:41:25 - INFO -   ✓ Best: 11.10 BPM
+2026-08-22 07:44:43 - INFO - Epoch   4/20 | Len=300 | Loss 355.7743 | Val FFT 20.98 | Val r(HR) 0.741 | HH MAE 98.08 | HH r -0.063
+2026-08-22 07:48:01 - INFO - Epoch   5/20 | Len=300 | Loss 327.9701 | Val FFT 12.37 | Val r(HR) 0.869 | HH MAE 98.01 | HH r -0.101
+2026-08-22 07:51:17 - INFO - Epoch   6/20 | Len=300 | Loss 311.8033 | Val FFT 17.28 | Val r(HR) 0.791 | HH MAE 98.03 | HH r -0.140
+2026-08-22 07:54:34 - INFO - Epoch   7/20 | Len=300 | Loss 294.8677 | Val FFT 14.83 | Val r(HR) 0.855 | HH MAE 98.02 | HH r -0.094
+2026-08-22 07:57:50 - INFO - Epoch   8/20 | Len=300 | Loss 279.6559 | Val FFT 12.94 | Val r(HR) 0.875 | HH MAE 98.03 | HH r -0.206
+2026-08-22 08:01:06 - INFO - Epoch   9/20 | Len=300 | Loss 269.2453 | Val FFT 12.99 | Val r(HR) 0.869 | HH MAE 98.10 | HH r -0.113
+2026-08-22 08:04:23 - INFO - Epoch  10/20 | Len=300 | Loss 256.8706 | Val FFT 13.47 | Val r(HR) 0.861 | HH MAE 98.14 | HH r -0.216
+2026-08-22 08:07:40 - INFO - Epoch  11/20 | Len=300 | Loss 246.6664 | Val FFT 13.70 | Val r(HR) 0.859 | HH MAE 98.13 | HH r -0.238
+2026-08-22 08:10:59 - INFO - Epoch  12/20 | Len=300 | Loss 245.1644 | Val FFT 14.42 | Val r(HR) 0.854 | HH MAE 98.12 | HH r -0.226
+2026-08-22 08:14:16 - INFO - Epoch  13/20 | Len=300 | Loss 241.5230 | Val FFT 13.04 | Val r(HR) 0.861 | HH MAE 98.12 | HH r -0.237
+2026-08-22 08:17:33 - INFO - Epoch  14/20 | Len=300 | Loss 235.9158 | Val FFT 13.70 | Val r(HR) 0.857 | HH MAE 98.08 | HH r -0.187
+2026-08-22 08:20:50 - INFO - Epoch  15/20 | Len=300 | Loss 226.8796 | Val FFT 13.98 | Val r(HR) 0.856 | HH MAE 98.10 | HH r -0.187
+2026-08-22 08:24:07 - INFO - Epoch  16/20 | Len=300 | Loss 224.0366 | Val FFT 13.89 | Val r(HR) 0.852 | HH MAE 98.10 | HH r -0.195
+2026-08-22 08:27:23 - INFO - Epoch  17/20 | Len=300 | Loss 223.5355 | Val FFT 13.50 | Val r(HR) 0.854 | HH MAE 98.09 | HH r -0.230
+2026-08-22 08:30:39 - INFO - Epoch  18/20 | Len=300 | Loss 218.1726 | Val FFT 13.47 | Val r(HR) 0.857 | HH MAE 98.10 | HH r -0.244
+2026-08-22 08:33:56 - INFO - Epoch  19/20 | Len=300 | Loss 218.5311 | Val FFT 13.50 | Val r(HR) 0.859 | HH MAE 98.12 | HH r -0.218
+2026-08-22 08:37:13 - INFO - Epoch  20/20 | Len=300 | Loss 215.3582 | Val FFT 12.85 | Val r(HR) 0.869 | HH MAE 98.09 | HH r -0.241
+2026-08-22 08:37:14 - INFO - Done. Best Val FFT: 11.10 BPM
+2026-08-22 08:37:15 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_test_s40_to_s49_n10_f763fd4e_seq300_step300]，共找到 51 个样本切片，极速准备就绪！

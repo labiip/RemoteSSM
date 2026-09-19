@@ -1,0 +1,28 @@
+[MMPD-OWN] train=22 val=5 test=6
+[MMPD-OWN] visible GPUs: 1
+2026-08-22 10:05:45 - INFO - RemoteSSM Finetuning | Device: cuda
+2026-08-22 10:05:45 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_train_s51_to_s72_n22_a8202b1e_seq300_step30]，共找到 14644 个样本切片，极速准备就绪！
+2026-08-22 10:05:48 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_val_s73_to_s77_n5_57bc15c1_seq300_step300]，共找到 495 个样本切片，极速准备就绪！
+2026-08-22 10:05:48 - INFO - Train: 14644 samples, subjects [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
+2026-08-22 10:05:48 - INFO - Val:   495 samples, subjects [73, 74, 75, 76, 77]
+2026-08-22 10:05:48 - INFO - HR labels: BVP-derived (SOTA-comparable)
+2026-08-22 10:05:48 - INFO - d=256 blocks=2 B=16 dropout=0.4 wd=0.005
+2026-08-22 10:05:48 - INFO - V11: random init + curriculum ([300] @ [20])
+2026-08-22 10:05:48 - INFO - GRL: warmup=30 adv_w=0.05 alpha_max=0.3
+~/.local/lib/python3.12/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+2026-08-22 10:05:49 - INFO - Params: 0.52M (V11 random init)
+~/rppg/rppg_project/train.py:325: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(resume_path, map_location=device)
+2026-08-22 10:05:52 - INFO - Resumed at epoch 2 (best=29.61)
+2026-08-22 10:05:55 - INFO - Pre-flight check: BVP [-6.100, 5.169], HR [-0.653, -0.275], NaN=False
+2026-08-22 10:20:25 - INFO - Epoch   2/20 | Len=300 | Loss 1473.1643 | Val FFT 31.46 | Val r(HR) -0.059 | HH MAE 81.17 | HH r 0.002
+2026-08-22 11:01:56 - INFO - Epoch   3/20 | Len=300 | Loss 1457.6019 | Val FFT 30.85 | Val r(HR) 0.014 | HH MAE 81.32 | HH r -0.024
+2026-08-22 11:45:57 - INFO - Epoch   4/20 | Len=300 | Loss 1449.8078 | Val FFT 30.94 | Val r(HR) -0.090 | HH MAE 81.36 | HH r -0.053
+2026-08-22 12:29:37 - INFO - Epoch   5/20 | Len=300 | Loss 1443.0052 | Val FFT 30.55 | Val r(HR) -0.081 | HH MAE 81.32 | HH r -0.055
+2026-08-22 13:13:07 - INFO - Epoch   6/20 | Len=300 | Loss 1443.0421 | Val FFT 31.60 | Val r(HR) -0.031 | HH MAE 81.33 | HH r -0.031
+2026-08-22 13:56:41 - INFO - Epoch   7/20 | Len=300 | Loss 1437.1870 | Val FFT 32.12 | Val r(HR) -0.082 | HH MAE 81.33 | HH r -0.050
+2026-08-22 14:40:15 - INFO - Epoch   8/20 | Len=300 | Loss 1428.7335 | Val FFT 28.22 | Val r(HR) 0.059 | HH MAE 81.31 | HH r -0.039
+2026-08-22 14:40:15 - INFO -   ✓ Best: 28.22 BPM
+2026-08-22 15:23:50 - INFO - Epoch   9/20 | Len=300 | Loss 1426.9243 | Val FFT 29.86 | Val r(HR) -0.014 | HH MAE 81.39 | HH r -0.006
+2026-08-22 16:07:20 - INFO - Epoch  10/20 | Len=300 | Loss 1401.5552 | Val FFT 28.69 | Val r(HR) -0.073 | HH MAE 81.40 | HH r 0.038

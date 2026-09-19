@@ -1,0 +1,19 @@
+[MMPD-FACEMAIN] train=22 val=5 test=6
+2026-08-25 16:52:34 - INFO - RemoteSSM Finetuning | Device: cuda
+2026-08-25 16:52:34 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_train_s51_to_s72_n22_a8202b1e_seq300_step30]，共找到 14644 个样本切片，极速准备就绪！
+2026-08-25 16:52:37 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_val_s73_to_s77_n5_57bc15c1_seq300_step300]，共找到 495 个样本切片，极速准备就绪！
+2026-08-25 16:52:37 - INFO - Train: 14644 samples, subjects [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
+2026-08-25 16:52:37 - INFO - Val:   495 samples, subjects [73, 74, 75, 76, 77]
+2026-08-25 16:52:37 - INFO - HR labels: BVP-derived (SOTA-comparable)
+2026-08-25 16:52:37 - INFO - d=256 blocks=2 B=16 dropout=0.4 wd=0.005
+2026-08-25 16:52:37 - INFO - V11: random init + curriculum ([300] @ [40])
+2026-08-25 16:52:37 - INFO - GRL: warmup=30 adv_w=0.0 alpha_max=0.0
+~/.local/lib/python3.12/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+2026-08-25 16:52:38 - INFO - Params: 0.52M (V11 random init)
+2026-08-25 16:52:43 - INFO - Pre-flight check: BVP [-2.680, 1.950], HR [-0.420, -0.237], NaN=False
+~/.local/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:224: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+2026-08-25 17:07:12 - INFO - Epoch   1/40 | Len=300 | Loss 2.2150 | Val FFT 22.65 | Val r(HR) 0.214 | HH MAE 81.81 | HH r -0.023
+2026-08-25 17:07:12 - INFO -   ✓ Best: 22.65 BPM
+2026-08-25 17:21:40 - INFO - Epoch   2/40 | Len=300 | Loss 2.1571 | Val FFT 22.75 | Val r(HR) 0.214 | HH MAE 81.71 | HH r -0.006

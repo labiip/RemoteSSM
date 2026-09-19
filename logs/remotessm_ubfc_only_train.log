@@ -1,0 +1,59 @@
+2026-08-29 09:19:01 - INFO - RemoteSSM Finetuning | Device: cuda
+2026-08-29 09:19:01 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_train_s01_to_s34_n34_9903cae0_seq300_step10]，共找到 3338 个样本切片，极速准备就绪！
+2026-08-29 09:19:01 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_val_s35_to_s39_n5_7300592e_seq300_step300]，共找到 24 个样本切片，极速准备就绪！
+2026-08-29 09:19:01 - INFO - Train: 3338 samples, subjects [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34]
+2026-08-29 09:19:01 - INFO - Val:   24 samples, subjects [35, 36, 37, 38, 39]
+2026-08-29 09:19:01 - INFO - HR labels: BVP-derived (SOTA-comparable)
+2026-08-29 09:19:01 - INFO - d=256 blocks=2 B=16 dropout=0.4 wd=0.005
+2026-08-29 09:19:01 - INFO - V11: random init + curriculum ([300] @ [40])
+2026-08-29 09:19:01 - INFO - GRL: warmup=30 adv_w=0.0 alpha_max=0.0
+2026-08-29 09:19:02 - INFO - Params: 0.52M (V11 random init)
+2026-08-29 09:19:06 - INFO - Pre-flight check: BVP [-2.601, 2.712], HR [-0.432, 0.147], NaN=False
+2026-08-29 09:22:22 - INFO - Epoch   1/40 | Len=300 | Loss 1.6818 | Val FFT 6.77 | Val r(HR) 0.776 | HH MAE 98.00 | HH r 0.296
+2026-08-29 09:22:22 - INFO -   ✓ Best: 6.77 BPM
+2026-08-29 09:25:37 - INFO - Epoch   2/40 | Len=300 | Loss 1.5495 | Val FFT 7.14 | Val r(HR) 0.786 | HH MAE 97.98 | HH r 0.142
+2026-08-29 09:28:52 - INFO - Epoch   3/40 | Len=300 | Loss 1.4073 | Val FFT 5.91 | Val r(HR) 0.854 | HH MAE 97.99 | HH r -0.212
+2026-08-29 09:28:53 - INFO -   ✓ Best: 5.91 BPM
+2026-08-29 09:32:08 - INFO - Epoch   4/40 | Len=300 | Loss 1.1991 | Val FFT 3.52 | Val r(HR) 0.858 | HH MAE 98.12 | HH r -0.137
+2026-08-29 09:32:08 - INFO -   ✓ Best: 3.52 BPM
+2026-08-29 09:35:24 - INFO - Epoch   5/40 | Len=300 | Loss 1.0253 | Val FFT 2.46 | Val r(HR) 0.916 | HH MAE 97.98 | HH r -0.107
+2026-08-29 09:35:24 - INFO -   ✓ Best: 2.46 BPM
+2026-08-29 09:38:38 - INFO - Epoch   6/40 | Len=300 | Loss 0.9161 | Val FFT 0.39 | Val r(HR) 1.000 | HH MAE 98.11 | HH r 0.096
+2026-08-29 09:38:39 - INFO -   ✓ Best: 0.39 BPM
+2026-08-29 09:41:53 - INFO - Epoch   7/40 | Len=300 | Loss 0.8327 | Val FFT 0.35 | Val r(HR) 1.000 | HH MAE 98.11 | HH r -0.305
+2026-08-29 09:41:54 - INFO -   ✓ Best: 0.35 BPM
+2026-08-29 09:45:08 - INFO - Epoch   8/40 | Len=300 | Loss 0.7644 | Val FFT 0.38 | Val r(HR) 1.000 | HH MAE 98.24 | HH r -0.477
+2026-08-29 09:48:23 - INFO - Epoch   9/40 | Len=300 | Loss 0.7123 | Val FFT 0.39 | Val r(HR) 1.000 | HH MAE 98.19 | HH r -0.517
+2026-08-29 09:51:38 - INFO - Epoch  10/40 | Len=300 | Loss 0.6630 | Val FFT 0.38 | Val r(HR) 1.000 | HH MAE 98.28 | HH r -0.504
+2026-08-29 09:54:53 - INFO - Epoch  11/40 | Len=300 | Loss 0.6225 | Val FFT 0.41 | Val r(HR) 1.000 | HH MAE 98.23 | HH r -0.512
+2026-08-29 09:58:09 - INFO - Epoch  12/40 | Len=300 | Loss 0.5899 | Val FFT 0.39 | Val r(HR) 1.000 | HH MAE 98.17 | HH r -0.630
+2026-08-29 10:01:24 - INFO - Epoch  13/40 | Len=300 | Loss 0.5633 | Val FFT 0.39 | Val r(HR) 1.000 | HH MAE 98.14 | HH r -0.684
+2026-08-29 10:04:39 - INFO - Epoch  14/40 | Len=300 | Loss 0.5419 | Val FFT 0.41 | Val r(HR) 1.000 | HH MAE 98.15 | HH r -0.636
+2026-08-29 10:07:54 - INFO - Epoch  15/40 | Len=300 | Loss 0.5234 | Val FFT 0.37 | Val r(HR) 1.000 | HH MAE 98.18 | HH r -0.748
+2026-08-29 10:11:09 - INFO - Epoch  16/40 | Len=300 | Loss 0.5097 | Val FFT 0.36 | Val r(HR) 1.000 | HH MAE 98.17 | HH r -0.690
+2026-08-29 10:14:24 - INFO - Epoch  17/40 | Len=300 | Loss 0.4980 | Val FFT 0.39 | Val r(HR) 1.000 | HH MAE 98.23 | HH r -0.629
+2026-08-29 10:17:41 - INFO - Epoch  18/40 | Len=300 | Loss 0.4884 | Val FFT 0.38 | Val r(HR) 1.000 | HH MAE 98.23 | HH r -0.654
+2026-08-29 10:20:56 - INFO - Epoch  19/40 | Len=300 | Loss 0.4785 | Val FFT 0.43 | Val r(HR) 1.000 | HH MAE 98.22 | HH r -0.570
+2026-08-29 10:24:11 - INFO - Epoch  20/40 | Len=300 | Loss 0.4705 | Val FFT 0.43 | Val r(HR) 1.000 | HH MAE 98.24 | HH r -0.622
+2026-08-29 10:27:26 - INFO - Epoch  21/40 | Len=300 | Loss 0.4644 | Val FFT 0.44 | Val r(HR) 1.000 | HH MAE 98.23 | HH r -0.579
+2026-08-29 10:30:41 - INFO - Epoch  22/40 | Len=300 | Loss 0.4581 | Val FFT 0.43 | Val r(HR) 1.000 | HH MAE 98.29 | HH r -0.516
+2026-08-29 10:33:56 - INFO - Epoch  23/40 | Len=300 | Loss 0.4530 | Val FFT 0.46 | Val r(HR) 1.000 | HH MAE 98.26 | HH r -0.553
+2026-08-29 10:37:11 - INFO - Epoch  24/40 | Len=300 | Loss 0.4472 | Val FFT 0.46 | Val r(HR) 1.000 | HH MAE 98.29 | HH r -0.562
+2026-08-29 10:40:27 - INFO - Epoch  25/40 | Len=300 | Loss 0.4428 | Val FFT 0.46 | Val r(HR) 1.000 | HH MAE 98.26 | HH r -0.583
+2026-08-29 10:43:42 - INFO - Epoch  26/40 | Len=300 | Loss 0.4392 | Val FFT 0.47 | Val r(HR) 1.000 | HH MAE 98.26 | HH r -0.544
+2026-08-29 10:46:58 - INFO - Epoch  27/40 | Len=300 | Loss 0.4344 | Val FFT 0.49 | Val r(HR) 1.000 | HH MAE 98.27 | HH r -0.593
+2026-08-29 10:50:15 - INFO - Epoch  28/40 | Len=300 | Loss 0.4318 | Val FFT 0.47 | Val r(HR) 1.000 | HH MAE 98.27 | HH r -0.608
+2026-08-29 10:53:30 - INFO - Epoch  29/40 | Len=300 | Loss 0.4302 | Val FFT 0.47 | Val r(HR) 1.000 | HH MAE 98.28 | HH r -0.625
+2026-08-29 10:56:45 - INFO - Epoch  30/40 | Len=300 | Loss 0.4281 | Val FFT 0.47 | Val r(HR) 1.000 | HH MAE 98.28 | HH r -0.582
+2026-08-29 11:00:00 - INFO - Epoch  31/40 | Len=300 | Loss 0.4263 | Val FFT 0.50 | Val r(HR) 1.000 | HH MAE 98.29 | HH r -0.608
+2026-08-29 11:03:15 - INFO - Epoch  32/40 | Len=300 | Loss 0.4244 | Val FFT 0.47 | Val r(HR) 1.000 | HH MAE 98.28 | HH r -0.568
+2026-08-29 11:06:30 - INFO - Epoch  33/40 | Len=300 | Loss 0.4226 | Val FFT 0.48 | Val r(HR) 1.000 | HH MAE 98.28 | HH r -0.613
+2026-08-29 11:09:46 - INFO - Epoch  34/40 | Len=300 | Loss 0.4219 | Val FFT 0.47 | Val r(HR) 1.000 | HH MAE 98.28 | HH r -0.594
+2026-08-29 11:13:01 - INFO - Epoch  35/40 | Len=300 | Loss 0.4207 | Val FFT 0.47 | Val r(HR) 1.000 | HH MAE 98.27 | HH r -0.619
+2026-08-29 11:16:16 - INFO - Epoch  36/40 | Len=300 | Loss 0.4206 | Val FFT 0.49 | Val r(HR) 1.000 | HH MAE 98.28 | HH r -0.628
+2026-08-29 11:19:31 - INFO - Epoch  37/40 | Len=300 | Loss 0.4197 | Val FFT 0.47 | Val r(HR) 1.000 | HH MAE 98.29 | HH r -0.611
+2026-08-29 11:22:46 - INFO - Epoch  38/40 | Len=300 | Loss 0.4192 | Val FFT 0.47 | Val r(HR) 1.000 | HH MAE 98.28 | HH r -0.605
+2026-08-29 11:26:01 - INFO - Epoch  39/40 | Len=300 | Loss 0.4191 | Val FFT 0.48 | Val r(HR) 1.000 | HH MAE 98.28 | HH r -0.619
+2026-08-29 11:29:16 - INFO - Epoch  40/40 | Len=300 | Loss 0.4199 | Val FFT 0.49 | Val r(HR) 1.000 | HH MAE 98.28 | HH r -0.617
+2026-08-29 11:29:17 - INFO - Done. Best Val FFT: 0.35 BPM
+2026-08-29 11:29:18 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_test_s40_to_s49_n10_f763fd4e_seq300_step300]，共找到 51 个样本切片，极速准备就绪！

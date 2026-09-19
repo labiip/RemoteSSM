@@ -1,0 +1,60 @@
+
+===== LEAVE-OOD full (COB+residual) =====
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_pure_best.pth | Params: 0.52M
+[INFO] Test: 23651 samples | subjects [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 20.76  RMSE: 29.57  StdErr: 21.05  Pearson: 0.1524
+  Acc<3: 30.5%  Acc<5: 35.2%  Acc<8: 39.2%
+  Valid: 23651/23651
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+===== LEAVE-OOD w/o residual =====
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_ablate_no_residual_best.pth | Params: 0.52M
+[INFO] Test: 23651 samples | subjects [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 20.10  RMSE: 29.01  StdErr: 20.92  Pearson: 0.1953
+  Acc<3: 32.2%  Acc<5: 37.1%  Acc<8: 41.0%
+  Valid: 23651/23651
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+===== LEAVE-OOD w/o COB (RANDOM_A) =====
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_ablate_no_cob_best.pth | Params: 0.52M
+[INFO] Test: 23651 samples | subjects [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 18.77  RMSE: 27.52  StdErr: 20.13  Pearson: 0.1890
+  Acc<3: 33.1%  Acc<5: 38.2%  Acc<8: 42.6%
+  Valid: 23651/23651
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------

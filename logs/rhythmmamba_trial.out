@@ -1,0 +1,34 @@
+2026-09-08 13:50:16 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_train_s01_to_s106_n40_1b42758a_seq300_step10]，共找到 9021 个样本切片，极速准备就绪！
+2026-09-08 13:50:17 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_val_s35_to_s108_n7_a9db59b9_seq300_step30]，共找到 891 个样本切片，极速准备就绪！
+2026-09-08 13:50:45 - INFO - rhythmmamba | Params: 4.92M | Device: cuda
+2026-09-08 13:50:45 - INFO - Train 9021 (step10) | Val 891 (step30)
+2026-09-08 13:50:45 - INFO - Epochs 3 | Adam lr=0.001 wd=0.005 | warmup 5+cosine | AMP off | cudnn off
+~/rppg/rppg_project/rhythmmamba_model.py:136: UserWarning: Casting complex values to real discards the imaginary part (Triggered internally at /pytorch/aten/src/ATen/native/Copy.cpp:308.)
+  x = x.to(torch.float32)
+2026-09-08 13:50:48 - INFO - Pre-flight BVP range [0.611, 2.295] NaN=False
+2026-09-08 14:22:55 - INFO - Epoch   1/3 | Loss 0.7614 | Val FFT MAE 15.98 | Val r(HR) 0.660
+2026-09-08 14:22:56 - INFO -   ✓ Best: 15.98 BPM
+2026-09-08 14:55:48 - INFO - Epoch   2/3 | Loss 0.5739 | Val FFT MAE 21.98 | Val r(HR) 0.488
+2026-09-08 15:32:11 - INFO - Epoch   3/3 | Loss 0.5462 | Val FFT MAE 15.63 | Val r(HR) 0.631
+2026-09-08 15:32:13 - INFO -   ✓ Best: 15.63 BPM
+2026-09-08 15:32:19 - INFO - Done. Best Val FFT MAE: 15.63 BPM
+
+========================================================
+  rhythmmamba test report (same protocol)
+========================================================
+[INFO] rhythmmamba UBFC test 40-49 | loaded rhythmmamba_ubfc_pure_best.pth | Params 4.92M
+2026-09-08 15:32:29 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_test_s40_to_s49_n10_f763fd4e_seq300_step30]，共找到 481 个样本切片，极速准备就绪！
+[INFO] Test UBFC test 40-49: 481 samples
+
+[UBFC test 40-49] rhythmmamba (same protocol, step-30)
+  MAE: 7.39  RMSE: 15.97  Pearson: 0.5449
+  Acc<3: 75.1%  Acc<5: 77.8%  Acc<8: 79.2%
+  Valid: 481/481
+[INFO] rhythmmamba PURE test 109-110 | loaded rhythmmamba_ubfc_pure_best.pth | Params 4.92M
+2026-09-08 15:33:39 - INFO - 🚀 检测到已构建的实数缓存目录 [~/rppg/rppg_project/cache/offline_cache_dir_cardio_v5_bvphr_real_test_s109_to_s110_n2_95655dcc_seq300_step30]，共找到 696 个样本切片，极速准备就绪！
+[INFO] Test PURE test 109-110: 696 samples
+
+[PURE test 109-110] rhythmmamba (same protocol, step-30)
+  MAE: 2.96  RMSE: 9.59  Pearson: 0.8514
+  Acc<3: 89.8%  Acc<5: 91.8%  Acc<8: 93.2%
+  Valid: 696/696

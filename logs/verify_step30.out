@@ -1,0 +1,104 @@
+
+########## ABLATE no_residual -> UBFC test (step30) ##########
+~/.local/lib/python3.12/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_ablate_no_residual_best.pth | Params: 0.52M
+[INFO] Test: 481 samples | subjects [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 0.70  RMSE: 2.31  StdErr: 2.20  Pearson: 0.9730
+  Acc<3: 98.1%  Acc<5: 99.0%  Acc<8: 99.0%
+  Valid: 481/481
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+########## ABLATE bpm_supervision -> UBFC test (step30) ##########
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_ablate_bpm_supervision_best.pth | Params: 0.52M
+[INFO] Test: 481 samples | subjects [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 23.28  RMSE: 29.74  StdErr: 18.50  Pearson: 0.5370
+  Acc<3: 9.8%  Acc<5: 19.8%  Acc<8: 31.0%
+  Valid: 481/481
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+########## ABLATE no_outband -> UBFC test (step30) ##########
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_ablate_no_outband_best.pth | Params: 0.52M
+[INFO] Test: 481 samples | subjects [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 0.97  RMSE: 4.01  StdErr: 3.89  Pearson: 0.9260
+  Acc<3: 97.9%  Acc<5: 98.3%  Acc<8: 98.3%
+  Valid: 481/481
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+########## UBFC-only -> MMPD ALL (step30) ##########
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_ubfc_only_best.pth | Params: 0.52M
+[INFO] Test: 23651 samples | subjects [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 19.72  RMSE: 28.73  StdErr: 20.90  Pearson: 0.1970
+  Acc<3: 33.0%  Acc<5: 38.2%  Acc<8: 42.4%
+  Valid: 23651/23651
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+########## MMPD real-ssm -> MMPD test (step30, roi64) ##########
+[EVAL] RemoteSSM | Device: cuda
+[INFO] Loaded: remotessm_mmpd_real_pt_best.pth | Params: 0.52M
+[INFO] Test: 4674 samples | subjects [78, 79, 80, 81, 82, 83]
+
+========================================================
+  RemoteSSM Test Report
+========================================================
+
+  [FFT(BVP) vs BVP-HR]
+  MAE: 16.64  RMSE: 22.84  StdErr: 15.65  Pearson: 0.1844
+  Acc<3: 31.1%  Acc<5: 35.8%  Acc<8: 40.2%
+  Valid: 4674/4674
+
+  [HR Head  vs BVP-HR] Too few valid samples (0)
+
+--------------------------------------------------------
+  Label: BVP-derived
+--------------------------------------------------------
+
+ALL VERIFY DONE
