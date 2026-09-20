@@ -1,0 +1,17 @@
+# RemoteSSM 环境依赖
+# 实测环境: Python 3.12.3 + PyTorch 2.5.1 (CUDA 12.1) + OpenCV 4.10.0, 单卡 NVIDIA TITAN Xp 12GB
+
+# ---- 核心依赖 (预处理 / 训练 / 评测) ----
+torch==2.5.1
+numpy
+scipy
+opencv-python==4.10.0.84
+scikit-learn        # 仅经典基线脚本 _baseline_hr.py / _baseline_face_hr.py 使用 (ICA)
+
+# ---- 可选: 复现 Mamba 系基线 (PhysMamba / RhythmMamba) 时才需要 ----
+# 主实验 (RemoteSSM) 不依赖以下包; 这两个含自定义 CUDA 算子, 必须与本机 CUDA/torch 版本匹配后再装
+mamba-ssm==2.3.2.post1
+causal-conv1d
+einops
+timm
+pyelftools
